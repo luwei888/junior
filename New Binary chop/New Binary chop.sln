@@ -6,9 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Binary chop", "New Binary chop\New Binary chop.csproj", "{C29EB368-4007-4933-94F6-E0ED3F1438CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BB9D1C8-FA5B-4935-BA6D-D1E1ED95D772}"
-	ProjectSection(SolutionItems) = preProject
-		..\New-nimigame\New-nimigame.csproj = ..\New-nimigame\New-nimigame.csproj
-	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "New-nimigame", "..\New-nimigame\New-nimigame.csproj", "{64F1A3E3-3D41-42E1-8104-3B64C1069F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aotoganerate array", "Aotoganerate array\Aotoganerate array.csproj", "{93234C48-4D0A-4A8D-B33A-8B594F88DF24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +21,14 @@ Global
 		{C29EB368-4007-4933-94F6-E0ED3F1438CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C29EB368-4007-4933-94F6-E0ED3F1438CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C29EB368-4007-4933-94F6-E0ED3F1438CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F1A3E3-3D41-42E1-8104-3B64C1069F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F1A3E3-3D41-42E1-8104-3B64C1069F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F1A3E3-3D41-42E1-8104-3B64C1069F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F1A3E3-3D41-42E1-8104-3B64C1069F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93234C48-4D0A-4A8D-B33A-8B594F88DF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93234C48-4D0A-4A8D-B33A-8B594F88DF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93234C48-4D0A-4A8D-B33A-8B594F88DF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93234C48-4D0A-4A8D-B33A-8B594F88DF24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
