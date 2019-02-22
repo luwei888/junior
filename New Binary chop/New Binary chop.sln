@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Binary chop", "New Binary chop\New Binary chop.csproj", "{C29EB368-4007-4933-94F6-E0ED3F1438CD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BB9D1C8-FA5B-4935-BA6D-D1E1ED95D772}"
+	ProjectSection(SolutionItems) = preProject
+		..\New-nimigame\New-nimigame.csproj = ..\New-nimigame\New-nimigame.csproj
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
