@@ -6,11 +6,11 @@ namespace binary_chop
     {
         static void Main(string[] args)
         {
-            int[] array = new int[] { 1, 8, 13, 14, 25, 26, 37, 68, 99, 100, 110, 123, 136, 314, 415, 685, 752, 850, 920, };
-            Console.WriteLine("现有数组：1, 8, 13, 14, 25, 26, 37, 68, 99, 100, 110, 123, 136, 314, 415, 685, 752, 850, 920, ");
+            int[] array = new int[] { 1, 8, 13, 14, 25, 26, 37, 68, 99, 100, 110, 123, 136, 314, 415, 685, 752, 850 };
+            Console.WriteLine("现有数组：1, 8, 13, 14, 25, 26, 37, 68, 99, 100, 110, 123, 136, 314, 415, 685, 752, 850 ");
 
             bool seek = false;
-            int index = (array.Length) / 2;
+            int index = array.Length-1;
             Console.WriteLine("请输入要查找的数：");
 
             int input = Convert.ToInt32(Console.ReadLine());
@@ -33,16 +33,16 @@ namespace binary_chop
                     }
                     else
                     {
-                        index -= array.Length / (2 * (i + 1));
+                        index -= (array.Length-1) / (2 * (i + 1));
                     }
                     Console.WriteLine($"设下一次查找位置为第{index + 1}位");
                     Console.WriteLine();
                 }
             }
-
             if (seek == false)
                 Console.WriteLine("找不到呀，假数据吧！！");
             Console.ReadLine();
         }
     }
 }
+
