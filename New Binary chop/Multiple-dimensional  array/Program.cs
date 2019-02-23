@@ -7,14 +7,17 @@ namespace Multiple_dimensional__array
         static void Main(string[] args)
         {
             //int add1 = 1;
-            int[,] array = new int[8, 8];
+            int x = 6;
+            int y = 6;
+
+            int[,] array = new int[x, y];
             Console.WriteLine("创建一个数组：");
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < x; i++)
             {
                 //int add2 = i;
                 //add2 = add2 + add1;
                 Console.WriteLine();
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < y; j++)
                 {
                     //add2 += add2;
                     //array[i, j] = add2;
@@ -31,7 +34,7 @@ namespace Multiple_dimensional__array
             Console.Write("纵坐标为：");
             int index2 = Convert.ToInt32(Console.ReadLine());
 
-            if (index1<6&index2<6)
+            if (index1<=x&index2<=y)
             {
                 Console.WriteLine($"找到啦！数据为：{array[index1 - 1, index2 - 1]}");
             }
