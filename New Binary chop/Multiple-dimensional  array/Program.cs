@@ -24,14 +24,21 @@ namespace Multiple_dimensional__array
             }
 
             Console.WriteLine();
-
+            
             Console.WriteLine("输入一个坐标查找数据：") ;
             Console.Write("横坐标为：");
             int index1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("纵坐标为：");
             int index2 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"找到啦！数据为：{array[index1-1,index2-1]}");
+            if (index1<6&index2<6)
+            {
+                Console.WriteLine($"找到啦！数据为：{array[index1 - 1, index2 - 1]}");
+            }
+            else
+            {
+                Console.WriteLine("错误，找不到！！");
+            }
             Console.ReadLine();
         }
     }
