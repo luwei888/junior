@@ -6,12 +6,12 @@ namespace Aotoganerate_array
     {
         static void Main(string[] args)
         {
-            int variable = 5;
+            int variable = 10;
             int[] array2 = Array(variable);
-            Console.WriteLine("输出数组："+array2);
-            
+
             Console.ReadLine();
         }
+
         static int[] Array(int variable)
         {
             int[] array = new int[variable];
@@ -29,6 +29,5 @@ namespace Aotoganerate_array
             return array;
         }
        
-        
     }
 }

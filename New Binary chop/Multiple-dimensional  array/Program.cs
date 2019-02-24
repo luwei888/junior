@@ -29,7 +29,7 @@ namespace Multiple_dimensional__array
             int x = 5;
             int y = 5;
             int[,] array = MultipleDimensionalArray(x,y);
-            Console.WriteLine("输出数组："+array);
+            //Console.WriteLine("输出数组："+array);
             //for (int i = 0; i < variable; i++)
             //{
             //    Console.Write(array[i] + " ");
