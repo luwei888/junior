@@ -12,7 +12,6 @@ namespace binary_chop
             bool seek = false;
             int index = array.Length-1;
             Console.WriteLine("请输入要查找的数：");
-
             int input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             for (int i = 0; i < Math.Log(array.Length, 2) + 1; i++)
