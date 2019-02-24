@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "数据类型", "数据类�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary chop2", "Binary chop2\Binary chop2.csproj", "{B2EE6CAA-8B84-4767-989C-1DE5E1C5B629}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ref use and out use", "ref use and out use\ref use and out use.csproj", "{EE6D0F31-6364-48BA-A947-E414B8774614}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{B2EE6CAA-8B84-4767-989C-1DE5E1C5B629}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2EE6CAA-8B84-4767-989C-1DE5E1C5B629}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2EE6CAA-8B84-4767-989C-1DE5E1C5B629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE6D0F31-6364-48BA-A947-E414B8774614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6D0F31-6364-48BA-A947-E414B8774614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6D0F31-6364-48BA-A947-E414B8774614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6D0F31-6364-48BA-A947-E414B8774614}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
