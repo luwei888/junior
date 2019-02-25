@@ -4,27 +4,17 @@ namespace binary_chop
 {
     class Program
     {
-        static void Seek(int variable)
+
+        //TODO:返回下标和是否找到的方法
+        //传入：（用方法生成的）随机数组
+        static int Seek(int length,int input,ref int index)
         {
-            int[] array = new int[variable];
-            array[0] = 0;
-            //int number=0;
-            Console.WriteLine("得到的随机数组为：");
-            Console.Write(array[0]+" ");
-            for (int i = 1; i < variable; i++)
-            {
-                //int random = new Random().Next(1, 20);
-                //number += new Random().Next(1, 5);
-                array[i] = array[i - 1] + new Random().Next(1, 10);
-                Console.Write(array[i] + " ");
-                //array[i] = array[i - 1] + new Random().Next(1, 5);
-            }
+            array = GetArray(length);
             int time = 0;
-            int index = array.Length / 2;
+            index = array.Length / 2;
             int left = 0;
             int right = array.Length;
             Console.WriteLine("请输入要查找的数：");
-            int input = Convert.ToInt32(Console.ReadLine());
             bool success = false;
             while (!success)
             {
@@ -33,6 +23,7 @@ namespace binary_chop
                     Console.WriteLine();
                     Console.WriteLine($"找到了,共查找了{time + 1}次，位置在{index}：数字为：{input}");
                     success = true;
+                    return time ;
                 }
                 else
                 {
@@ -50,23 +41,25 @@ namespace binary_chop
                     Console.WriteLine();
                     if ((right - left) == 1 & (input == array[index]))//数值为最后一位时，left right距离为1
                     {
-                        Console.WriteLine($"找到了,共查找了{time + 1}次，位置在{index + 1}：数字为：{input}");
-                        break;
+                        return time;
                     }
                     if (((right - left) / 2) == 0)
                     {
                         success = true;
                     }
                     time++;
+                    return time;
                 }
             }
             if (((right - left) / 2) == 0)
             {
                 Console.WriteLine("找不到，假数据！！");
             }
-           
             Console.ReadLine();
+            return time;
         }
+
+
         static void Main()
         {
             Console.WriteLine("输入数组大小：");

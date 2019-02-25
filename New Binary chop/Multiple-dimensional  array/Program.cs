@@ -28,28 +28,31 @@ namespace Multiple_dimensional__array
         {
             int x = 5;
             int y = 5;
-            int[,] array = MultipleDimensionalArray(x,y);
+
+            //TODO:
+             MultipleDimensionalArray(x,y);
             //Console.WriteLine("输出数组："+array);
             //for (int i = 0; i < variable; i++)
             //{
             //    Console.Write(array[i] + " ");
             //}
             Console.ReadLine();
+            Console.WriteLine();
+            //            Console.WriteLine("输入一个坐标查找数据：") ;
+            //            Console.Write("横坐标为：");
+            //            int index1 = Convert.ToInt32(Console.ReadLine());
+            //        Console.Write("纵坐标为：");
+            //            int index2 = Convert.ToInt32(Console.ReadLine());
+            //            if (index1<=x&index2<=y)
+            //            {
+            //                Console.WriteLine($"找到啦！数据为：{array[index1 - 1, index2 - 1]}");
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("错误，找不到！！");
+            //            }
+            //Console.ReadLine();
         }
-//        Console.WriteLine();
-//            Console.WriteLine("输入一个坐标查找数据：") ;
-//            Console.Write("横坐标为：");
-//            int index1 = Convert.ToInt32(Console.ReadLine());
-//        Console.Write("纵坐标为：");
-//            int index2 = Convert.ToInt32(Console.ReadLine());
-//            if (index1<=x&index2<=y)
-//            {
-//                Console.WriteLine($"找到啦！数据为：{array[index1 - 1, index2 - 1]}");
-//            }
-//            else
-//            {
-//                Console.WriteLine("错误，找不到！！");
-//            }
-//Console.ReadLine();
+               
     }
 }
