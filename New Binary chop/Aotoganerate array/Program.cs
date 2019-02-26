@@ -1,4 +1,6 @@
 ﻿using System;
+using CQ=Chine.ChongQing.pretty;
+using TW=Chine.Taiwanese.pretty;
 
 namespace Aotoganerate_array
 {
@@ -190,13 +192,50 @@ namespace Aotoganerate_array
 
         static void Main(string[] args)
         {
-            float A = 888.88f;
-            float B = 666.66f;
-            Console.WriteLine("A=" + A + "  B=" + B);
-            Swap(ref A, ref B);
-            Console.WriteLine("转换后：");
-            Console.WriteLine("A=" + A + "  B=" + B);
+            CQ.Pretty liuxiaoqing = new CQ.Pretty(168,58,"liuxiaoqing",true);
+            Console.WriteLine("Pretty women name:"+liuxiaoqing.Name+" \n  身高 "+liuxiaoqing.Height+" \n  婚否？  "+liuxiaoqing.Marry);
+            Console.WriteLine();
+            TW.Pretty lingzhiling = new TW.Pretty(173, 65, "lingzhiling", false);
+            Console.WriteLine("Pretty women name:"+lingzhiling.Name+" \n  身高 "+lingzhiling.Height+" \n  婚否？  " +lingzhiling.Marry);
+            Console.Write("\n输入回车键退出");
             Console.ReadLine();
+        }
+    }
+}
+namespace Chine.ChongQing.pretty
+    {
+    struct Pretty
+    {
+        public int Height;
+        private int Weight;
+        public string Name;
+        internal bool Marry;
+        
+        public Pretty(int height,int weight,string name,bool marry)
+        {
+            Height = height;
+            Weight = weight;
+            Name = name;
+            Marry = marry;
+        }
+    }
+   
+}
+namespace Chine.Taiwanese.pretty
+{
+    struct Pretty
+    {
+        public int Height;
+        private int Weight;
+        public string Name;
+        internal bool Marry;
+
+        public Pretty(int height, int weight, string name, bool marry)
+        {
+            Height = height;
+            Weight = weight;
+            Name = name;
+            Marry = marry;
         }
     }
 }
