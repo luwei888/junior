@@ -1,7 +1,6 @@
 ﻿using System;
 using CQ=Chine.ChongQing.pretty;
 using TW=Chine.Taiwanese.pretty;
-
 namespace Aotoganerate_array
 {
     class Program
