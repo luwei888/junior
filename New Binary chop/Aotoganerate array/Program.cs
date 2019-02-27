@@ -1,6 +1,6 @@
 ﻿using System;
-using CQ=Chine.ChongQing.pretty;
-using TW=Chine.Taiwanese.pretty;
+using CQ = Chine.ChongQing.pretty;
+using TW = Chine.Taiwanese.pretty;
 namespace Aotoganerate_array
 {
     class Program
@@ -188,53 +188,72 @@ namespace Aotoganerate_array
                 result = Recursion(n - 1) * n;
             return result;
         }
-
-        static void Main(string[] args)
+        static void Beautycall()
         {
-            CQ.Pretty liuxiaoqing = new CQ.Pretty(168,58,"liuxiaoqing",true);
-            Console.WriteLine("Pretty women name:"+liuxiaoqing.Name+" \n  身高 "+liuxiaoqing.Height+" \n  婚否？  "+liuxiaoqing.Marry);
+            CQ.Pretty liuxiaoqing = new CQ.Pretty(168, 58, "liuxiaoqing", true);
+            Console.WriteLine("Pretty women name:" + liuxiaoqing.Name + " \n  身高 " + liuxiaoqing.Height + " \n  婚否？  " + liuxiaoqing.Marry);
             Console.WriteLine();
             TW.Pretty lingzhiling = new TW.Pretty(173, 65, "lingzhiling", false);
-            Console.WriteLine("Pretty women name:"+lingzhiling.Name+" \n  身高 "+lingzhiling.Height+" \n  婚否？  " +lingzhiling.Marry);
+            Console.WriteLine("Pretty women name:" + lingzhiling.Name + " \n  身高 " + lingzhiling.Height + " \n  婚否？  " + lingzhiling.Marry);
             Console.Write("\n输入回车键退出");
             Console.ReadLine();
         }
-    }
-}
-namespace Chine.ChongQing.pretty
-    {
-    struct Pretty
-    {
-        public int Height;
-        private int Weight;
-        public string Name;
-        internal bool Marry;
-        
-        public Pretty(int height,int weight,string name,bool marry)
+        static void datetime(int year, int month, int day)
         {
-            Height = height;
-            Weight = weight;
-            Name = name;
-            Marry = marry;
+            DateTime date = new DateTime(2019, 1, 6);
+            Console.WriteLine("第1周： 2018年12月31日 - 2019年 1月 6日");
+            for (int week = 1; week < 52; week++)
+            {
+                Console.WriteLine();
+                Console.Write($"第{ week + 1}周：");
+                DateTime dateToDisplay = date.AddDays(week * 7 - 6);
+                Console.Write($" 2019年 {dateToDisplay.Month}月 {dateToDisplay.Day}日");
+                dateToDisplay = date.AddDays(week * 7);
+                Console.Write($" - 2019年 {dateToDisplay.Month}月 {dateToDisplay.Day}日");
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+        static void Main(string[] args)
+        {
+            
         }
     }
-   
 }
-namespace Chine.Taiwanese.pretty
-{
-    struct Pretty
+    namespace Chine.Taiwanese.pretty
     {
-        public int Height;
-        private int Weight;
-        public string Name;
-        internal bool Marry;
+        struct Pretty
+        {
+            public int Height;
+            private int Weight;
+            public string Name;
+            internal bool Marry;
 
-        public Pretty(int height, int weight, string name, bool marry)
-        {
-            Height = height;
-            Weight = weight;
-            Name = name;
-            Marry = marry;
+            public Pretty(int height, int weight, string name, bool marry)
+            {
+                Height = height;
+                Weight = weight;
+                Name = name;
+                Marry = marry;
+            }
         }
     }
-}
+    namespace Chine.ChongQing.pretty
+    {
+        struct Pretty
+        {
+            public int Height;
+            private int Weight;
+            public string Name;
+            internal bool Marry;
+
+            public Pretty(int height, int weight, string name, bool marry)
+            {
+                Height = height;
+                Weight = weight;
+                Name = name;
+                Marry = marry;
+            }
+        }
+    }
+
