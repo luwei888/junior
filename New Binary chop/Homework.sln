@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BB9D1C8-FA5B-4935-BA6D-D1E1ED95D772}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aotogenerate array", "Aotoganerate array\Aotogenerate array.csproj", "{93234C48-4D0A-4A8D-B33A-8B594F88DF24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework set", "Aotoganerate array\Homework set.csproj", "{93234C48-4D0A-4A8D-B33A-8B594F88DF24}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datetime2", "Datetime\Datetime2.csproj", "{B91D6107-521B-4192-8BCE-6F719B325507}"
 EndProject
