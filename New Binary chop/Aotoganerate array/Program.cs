@@ -1,6 +1,6 @@
 ﻿using System;
-using CQ = Chine.ChongQing.pretty;
-using TW = Chine.Taiwanese.pretty;
+using CQ = China.ChongQing.pretty;
+using TW = China.Taiwanese.pretty;
 namespace Homework_set
 {
 
@@ -54,6 +54,7 @@ namespace Homework_set
             Arrayshow(stack);
             Console.WriteLine();
         }
+
         /// <summary>
         /// 多数据入栈
         /// </summary>
@@ -73,6 +74,7 @@ namespace Homework_set
             Arrayshow(stack);
             Console.WriteLine();
         }
+
         /// <summary>
         /// 单数据出栈
         /// </summary>
@@ -88,6 +90,7 @@ namespace Homework_set
             Arrayshow(stack);
             Console.WriteLine();
         }
+
         /// <summary>
         /// 多数据出栈
         /// </summary>
@@ -109,7 +112,7 @@ namespace Homework_set
         }
     }
     
-    public class HomworkFunction
+    public class HomeworkFunction
     {
         static int[] GetArray(int variable)
         {
@@ -361,7 +364,7 @@ namespace Homework_set
     }
 }
 
-namespace Chine.Taiwanese.pretty
+namespace China.Taiwanese.pretty
 {
     struct Pretty
     {
@@ -380,7 +383,7 @@ namespace Chine.Taiwanese.pretty
 
     }
 }
-namespace Chine.ChongQing.pretty
+namespace China.ChongQing.pretty
 {
     struct Pretty
     {
