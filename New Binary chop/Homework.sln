@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework set", "Aotoganerat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datetime2", "Datetime\Datetime2.csproj", "{B91D6107-521B-4192-8BCE-6F719B325507}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowTime", "ShowTime\ShowTime.csproj", "{5B771974-10BD-45EF-BB2F-B36E9A7E3CBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imitate stack", "Imitate stack\Imitate stack.csproj", "{67F050DC-5805-4DBA-8EB6-6F10B547BB13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,14 @@ Global
 		{B91D6107-521B-4192-8BCE-6F719B325507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B91D6107-521B-4192-8BCE-6F719B325507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B91D6107-521B-4192-8BCE-6F719B325507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B771974-10BD-45EF-BB2F-B36E9A7E3CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B771974-10BD-45EF-BB2F-B36E9A7E3CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B771974-10BD-45EF-BB2F-B36E9A7E3CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B771974-10BD-45EF-BB2F-B36E9A7E3CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F050DC-5805-4DBA-8EB6-6F10B547BB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F050DC-5805-4DBA-8EB6-6F10B547BB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F050DC-5805-4DBA-8EB6-6F10B547BB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F050DC-5805-4DBA-8EB6-6F10B547BB13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

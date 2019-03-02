@@ -3,7 +3,113 @@ using CQ = Chine.ChongQing.pretty;
 using TW = Chine.Taiwanese.pretty;
 namespace Homework_set
 {
-    class Program
+
+    public class ImitateStack
+    {
+        /// <summary>
+        /// 出/入栈检查
+        /// </summary>
+        /// <param name="index">出入栈数量</param>
+        static void Check(int index)
+        {
+            if (index > 10)
+            {
+                Console.WriteLine("栈溢出将会报错");
+                Console.ReadLine();
+            }
+            else if (index < 0)
+            {
+                Console.WriteLine("栈已空将会报错");
+                Console.ReadLine();
+            }
+        }
+        /// <summary>
+        /// 遍历显示数组
+        /// </summary>
+        /// <param name="array">数组</param>
+        static void Arrayshow(int[] array)
+        {
+            foreach (int i in array)
+            {
+                Console.Write(i + "  ");
+            }
+        }
+
+        internal int[] stack = new int[10];
+        internal int top = 0;
+        int checkIndex = 0;
+
+        /// <summary>
+        /// 单个数据入栈
+        /// </summary>
+        /// <param name="value">单数据</param>
+        internal void Push(int value)
+        {
+            checkIndex++;
+            Console.WriteLine();
+            Console.WriteLine($"{value}入栈");
+            Check(checkIndex);
+            stack[top] = value;
+            top++;
+            Arrayshow(stack);
+            Console.WriteLine();
+        }
+        /// <summary>
+        /// 多数据入栈
+        /// </summary>
+        /// <param name="value">以数组形式入栈</param>
+        internal void Push(int[] value)
+        {
+            checkIndex += value.Length;
+            Console.WriteLine();
+            Arrayshow(value);
+            Console.WriteLine($"入栈");
+            Check(checkIndex);
+            for (int i = 0; i < value.Length; i++)
+            {
+                stack[top] = value[i];
+                top++;
+            }
+            Arrayshow(stack);
+            Console.WriteLine();
+        }
+        /// <summary>
+        /// 单数据出栈
+        /// </summary>
+        /// <param name="value">单数据</param>
+        internal void Pop(int value)
+        {
+            checkIndex--;
+            Console.WriteLine();
+            Console.WriteLine($"{value}出栈");
+            Check(checkIndex);
+            stack[top - 1] = 0;
+            top--;
+            Arrayshow(stack);
+            Console.WriteLine();
+        }
+        /// <summary>
+        /// 多数据出栈
+        /// </summary>
+        /// <param name="value">以数组形式出栈</param>
+        internal void Pop(int[] value)
+        {
+            checkIndex -= value.Length;
+            Console.WriteLine();
+            Arrayshow(value);
+            Console.WriteLine($"出栈");
+            Check(checkIndex);
+            for (int i = 0; i < value.Length; i++)
+            {
+                stack[top - 1] = 0;
+                top--;
+            }
+            Arrayshow(stack);
+            Console.WriteLine();
+        }
+    }
+    
+    public class HomworkFunction
     {
         static int[] GetArray(int variable)
         {
@@ -22,6 +128,7 @@ namespace Homework_set
             }
             return array;
         }
+
         static int[,] GetDoubleDimensionalArray(int x, int y)
         {
             //int add1 = 1;
@@ -42,6 +149,7 @@ namespace Homework_set
             }
             return array;
         }
+
         static int BinaryChop(int length, int input, ref int index)
         {
             int[] array = GetArray(length);
@@ -94,6 +202,7 @@ namespace Homework_set
             Console.ReadLine();
             return time;
         }
+
         static int BinaryChop2(int length, int input, ref int index)
         {
             int[] array = GetArray(length);
@@ -134,6 +243,7 @@ namespace Homework_set
             Console.ReadLine();
             return time;
         }
+
         static void MiniGame(int guess)
         {
             int random = new Random().Next(500);
@@ -158,7 +268,8 @@ namespace Homework_set
             }
             Console.ReadLine();
         }
-        static int[] GetAotoArray(int length = 10, int step = 5, int first = 10)
+
+        static int[] GetAutoArray(int length = 10, int step = 5, int first = 10)
         {
             int[] array = new int[step];
             array[0] = first;
@@ -170,6 +281,7 @@ namespace Homework_set
             }
             return array;
         }
+
         static void Swap(ref float A, ref float B)
         {
             float temp;
@@ -177,6 +289,7 @@ namespace Homework_set
             A = B;
             B = temp;
         }
+
         static int Recursion(int n)
         {
             int result;
@@ -188,7 +301,8 @@ namespace Homework_set
                 result = Recursion(n - 1) * n;
             return result;
         }
-        static void Beautycall()
+
+        static void BeautyCall()
         {
             CQ.Pretty liuxiaoqing = new CQ.Pretty(168, 58, "liuxiaoqing", true);
             Console.WriteLine("Pretty women name:" + liuxiaoqing.Name + " \n  身高 " + liuxiaoqing.Height + " \n  婚否？  " + liuxiaoqing.Marry);
@@ -198,62 +312,89 @@ namespace Homework_set
             Console.Write("\n输入回车键退出");
             Console.ReadLine();
         }
-        static void datetime(int year, int month, int day)
+
+        static void DateTime(int year, int month, int day)
         {
-            DateTime date = new DateTime(2019, 1, 6);
+            DateTime date = new DateTime(year, month, day);
             Console.WriteLine("第1周： 2018年12月31日 - 2019年 1月 6日");
-            for (int week = 1; week < 52; week++)
+            int week = 1;
+            bool success = true;
+            while (success)
             {
                 Console.WriteLine();
                 Console.Write($"第{ week + 1}周：");
                 DateTime dateToDisplay = date.AddDays(week * 7 - 6);
                 Console.Write($" 2019年 {dateToDisplay.Month}月 {dateToDisplay.Day}日");
-                dateToDisplay = date.AddDays(week * 7);
+                dateToDisplay = date.AddDays((week + 1) * 7);
                 Console.Write($" - 2019年 {dateToDisplay.Month}月 {dateToDisplay.Day}日");
                 Console.WriteLine();
+                week++;
+                if (dateToDisplay.Year != 2019)
+                {
+                    success = false;
+                }
             }
             Console.ReadLine();
         }
+    }
+
+    class Program
+    {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("模拟深度为10的栈");
+            int[] array = { 2, 5, 9 };
+            int[] array2 = { 1, 6, 8, 5 };
+            ImitateStack imitateStack = new ImitateStack();
+
+            imitateStack.Push(10);
+            imitateStack.Push(array);
+            imitateStack.Push(15);
+            imitateStack.Pop(15);
+            imitateStack.Pop(array);
+            imitateStack.Push(array2);
+            imitateStack.Push(array2);
+            imitateStack.Push(array2);
+
+            Console.ReadLine();
         }
     }
 }
-    namespace Chine.Taiwanese.pretty
-    {
-        struct Pretty
-        {
-            public int Height;
-            private int Weight;
-            public string Name;
-            internal bool Marry;
 
-            public Pretty(int height, int weight, string name, bool marry)
-            {
-                Height = height;
-                Weight = weight;
-                Name = name;
-                Marry = marry;
-            }
+namespace Chine.Taiwanese.pretty
+{
+    struct Pretty
+    {
+        public int Height;
+        private int Weight;
+        public string Name;
+        internal bool Marry;
+
+        public Pretty(int height, int weight, string name, bool marry)
+        {
+            Height = height;
+            Weight = weight;
+            Name = name;
+            Marry = marry;
+        }
+
+    }
+}
+namespace Chine.ChongQing.pretty
+{
+    struct Pretty
+    {
+        public int Height;
+        private int Weight;
+        public string Name;
+        internal bool Marry;
+
+        public Pretty(int height, int weight, string name, bool marry)
+        {
+            Height = height;
+            Weight = weight;
+            Name = name;
+            Marry = marry;
         }
     }
-    namespace Chine.ChongQing.pretty
-    {
-        struct Pretty
-        {
-            public int Height;
-            private int Weight;
-            public string Name;
-            internal bool Marry;
-
-            public Pretty(int height, int weight, string name, bool marry)
-            {
-                Height = height;
-                Weight = weight;
-                Name = name;
-                Marry = marry;
-            }
-        }
-    }
-
+}
