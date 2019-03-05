@@ -64,7 +64,7 @@ namespace Datetime
             {
                  dateToDisplay = dateTime.AddMonths(amount);
             }
-            Console.WriteLine($"{amount}{Unit}过后的日期为: {dateToDisplay.Year}年{dateToDisplay.Month}月{dateToDisplay.Day}");
+            Console.WriteLine($"{amount}{Unit}过后的日期为: {dateToDisplay.Year}年{dateToDisplay.Month}月{dateToDisplay.Day}日");
             Console.WriteLine();
             Console.WriteLine("按回车键退出");
             Console.ReadLine();

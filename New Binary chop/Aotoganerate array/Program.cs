@@ -3,7 +3,6 @@ using CQ = China.ChongQing.pretty;
 using TW = China.Taiwanese.pretty;
 namespace Homework_set
 {
-
     public class ImitateStack
     {
         /// <summary>
@@ -111,17 +110,15 @@ namespace Homework_set
             Console.WriteLine();
         }
     }
-    
-    public class HomeworkFunction
+
+    public class FatherArray
     {
-        static int[] GetArray(int variable)
+        internal int[] array ;
+        public  FatherArray()
         {
-            int[] array = new int[variable];
-            array[0] = 0;
-            //int number=0;
             Console.WriteLine("得到的随机数组为：");
-            Console.Write(array[0] + " ");
-            for (int i = 1; i < variable; i++)
+            //Console.Write(faterArray[0] + " ");
+            for (int i = 1; i < array.Length; i++)
             {
                 //int random = new Random().Next(1, 20);
                 //number += new Random().Next(1, 5);
@@ -129,10 +126,26 @@ namespace Homework_set
                 Console.Write(array[i] + " ");
                 //array[i] = array[i - 1] + new Random().Next(1, 5);
             }
+        }
+    }
+    class SunArray:FatherArray
+    {
+        static int[] GetAutoArray(int length = 10, int step = 5, int first = 10)
+        {
+            int[] array = new int[step];
+            array[0] = first;
+            Console.Write("   " + array[0]);
+            for (int i = 1; i < step; i++)
+            {
+                array[i] = array[i - 1] + length;
+                Console.Write("  " + array[i]);
+            }
             return array;
         }
-
-        static int[,] GetDoubleDimensionalArray(int x, int y)
+    }
+    class DoblueDmensionalArray:FatherArray
+    {
+        internal int[,] GetDoubleDimensionalArray(int x, int y)
         {
             //int add1 = 1;
             int[,] array = new int[x, y];
@@ -152,101 +165,14 @@ namespace Homework_set
             }
             return array;
         }
+    }
 
-        static int BinaryChop(int length, int input, ref int index)
-        {
-            int[] array = GetArray(length);
-            int time = 0;
-            index = array.Length / 2;
-            int left = 0;
-            int right = array.Length;
+    
 
-            Console.WriteLine("请输入要查找的数：");
-            bool success = false;
-            while (!success)
-            {
-                if (input == array[index - 1])
-                {
-                    Console.WriteLine();
-                    Console.WriteLine($"找到了,共查找了{time + 1}次，位置在{index}：数字为：{input}");
-                    success = true;
-                    return time;
-                }
-                else
-                {
-                    Console.WriteLine($"第{time + 1}次查找，取第{index + 1}位值为{array[index]}");
-                    if (input > array[index - 1])
-                    {
-                        left = index;
-                    }
-                    else
-                    {
-                        right = index;
-                    }
-                    index = (left + right) / 2;
-                    Console.WriteLine($"设下一次查找位置为第{index + 1}位");
-                    Console.WriteLine();
-                    if ((right - left) == 1 & (input == array[index]))//数值为最后一位时，left right距离为1
-                    {
-                        return time;
-                    }
-                    if (((right - left) / 2) == 0)
-                    {
-                        success = true;
-                    }
-                    time++;
-                    return time;
-                }
-            }
-            if (((right - left) / 2) == 0)
-            {
-                Console.WriteLine("找不到，假数据！！");
-            }
-            Console.ReadLine();
-            return time;
-        }
-
-        static int BinaryChop2(int length, int input, ref int index)
-        {
-            int[] array = GetArray(length);
-            int time = 1;
-            bool seek = false;
-            index = array.Length - 1;
-            Console.WriteLine("请输入要查找的数：");
-
-            Console.WriteLine();
-            //TODO: Math.Log(array.Length, 2) + 1
-            for (int i = 0; i < Math.Log(array.Length, 2) + 1; i++)
-            {
-                if (input == array[index])
-                {
-                    Console.WriteLine();
-                    seek = true;
-                    Console.WriteLine($"找到了,共查找了{i + 1}次，位置在{index + 1}：数字为：{input}");
-                    return time;
-                }
-                else
-                {
-                    Console.WriteLine($"第{i + 1}次查找，取第{index + 1}位值为{array[index]}");
-                    if (input > array[index])
-                    {
-                        index += array.Length / (2 * (i + 1));
-                    }
-                    else
-                    {
-                        index -= (array.Length - 1) / (2 * (i + 1));
-                    }
-                    Console.WriteLine($"设下一次查找位置为第{index + 1}位");
-                    Console.WriteLine();
-                }
-                time++;
-            }
-            if (seek == false)
-                Console.WriteLine("找不到呀，假数据吧！！");
-            Console.ReadLine();
-            return time;
-        }
-
+    public class HomeworkFunction
+    {   
+        
+        
         static void MiniGame(int guess)
         {
             int random = new Random().Next(500);
@@ -285,7 +211,7 @@ namespace Homework_set
             return array;
         }
 
-        static void Swap(ref float A, ref float B)
+        internal void Swap(ref float A, ref float B)
         {
             float temp;
             temp = A;
@@ -307,13 +233,13 @@ namespace Homework_set
 
         static void BeautyCall()
         {
-            CQ.Pretty liuxiaoqing = new CQ.Pretty(168, 58, "liuxiaoqing", true);
-            Console.WriteLine("Pretty women name:" + liuxiaoqing.Name + " \n  身高 " + liuxiaoqing.Height + " \n  婚否？  " + liuxiaoqing.Marry);
-            Console.WriteLine();
-            TW.Pretty lingzhiling = new TW.Pretty(173, 65, "lingzhiling", false);
-            Console.WriteLine("Pretty women name:" + lingzhiling.Name + " \n  身高 " + lingzhiling.Height + " \n  婚否？  " + lingzhiling.Marry);
-            Console.Write("\n输入回车键退出");
-            Console.ReadLine();
+            //CQ.Pretty liuxiaoqing = new CQ.Pretty(168, 58, "liuxiaoqing", true);
+            //Console.WriteLine("Pretty women name:" + liuxiaoqing.Name + " \n  身高 " + liuxiaoqing.Height + " \n  婚否？  " + liuxiaoqing.Marry);
+            //Console.WriteLine();
+            //TW.Pretty lingzhiling = new TW.Pretty(173, 65, "lingzhiling", false);
+            //Console.WriteLine("Pretty women name:" + lingzhiling.Name + " \n  身高 " + lingzhiling.Height + " \n  婚否？  " + lingzhiling.Marry);
+            //Console.Write("\n输入回车键退出");
+            //Console.ReadLine();
         }
 
         static void DateTime(int year, int month, int day)
@@ -339,48 +265,65 @@ namespace Homework_set
             }
             Console.ReadLine();
         }
+
+    }
+
+    public class FunctionCall
+    {
+        //Console.WriteLine("模拟深度为10的栈");
+        //    int[] array = { 2, 5, 9 };
+        //int[] array2 = { 1, 6, 8, 5 };
+        //ImitateStack imitateStack = new ImitateStack();
+
+        //imitateStack.Push(10);
+        //    imitateStack.Push(array);
+        //    imitateStack.Push(15);
+        //    imitateStack.Pop(15);
+        //    imitateStack.Pop(array);
+        //    imitateStack.Push(array2);
+        //    imitateStack.Push(array2);
+        //    imitateStack.Push(array2);
+
+        //    Console.ReadLine();
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("模拟深度为10的栈");
-            int[] array = { 2, 5, 9 };
-            int[] array2 = { 1, 6, 8, 5 };
-            ImitateStack imitateStack = new ImitateStack();
 
-            imitateStack.Push(10);
-            imitateStack.Push(array);
-            imitateStack.Push(15);
-            imitateStack.Pop(15);
-            imitateStack.Pop(array);
-            imitateStack.Push(array2);
-            imitateStack.Push(array2);
-            imitateStack.Push(array2);
-
-            Console.ReadLine();
         }
     }
 }
 
 namespace China.Taiwanese.pretty
 {
-    struct Pretty
+    class Pretty
     {
-        public int Height;
-        private int Weight;
-        public string Name;
-        internal bool Marry;
-
-        public Pretty(int height, int weight, string name, bool marry)
+        private readonly int _age;
+        
+        private int _height;
+        internal int Getheight()
         {
-            Height = height;
-            Weight = weight;
-            Name = name;
-            Marry = marry;
+           return _height; 
         }
 
+        private int _weight;
+        internal int Weight
+        {
+            get { return _weight; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _weight = value;
+                }
+                else
+                    _weight = 0;
+            }
+        }
+
+        internal int FaceScore { get; set; } = 70;
     }
 }
 namespace China.ChongQing.pretty
