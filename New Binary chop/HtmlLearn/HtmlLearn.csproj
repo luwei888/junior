@@ -61,7 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EnroPage.html" />
+    <Content Include="EnrollPage.html" />
     <Content Include="HtmlLear.html" />
     <Content Include="LoginPage.html" />
     <Content Include="Web.config" />
