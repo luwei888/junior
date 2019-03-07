@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datetime2", "Datetime\Datet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShowTime", "ShowTime\ShowTime.csproj", "{5B771974-10BD-45EF-BB2F-B36E9A7E3CBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "How many english word", "How many english word\How many english word.csproj", "{D9CC2D8A-6786-47BF-AE70-9E0D890A7E4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "How many english word", "How many english word\How many english word.csproj", "{D9CC2D8A-6786-47BF-AE70-9E0D890A7E4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interim", "interim\interim.csproj", "{95E5C594-DA0B-48A9-B24C-967A9A8062D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "interim", "interim\interim.csproj", "{95E5C594-DA0B-48A9-B24C-967A9A8062D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
