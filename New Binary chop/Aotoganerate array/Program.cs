@@ -211,7 +211,7 @@ namespace Homework_set
             return array;
         }
 
-        internal void Swap(ref float A, ref float B)
+        public void Swap(ref float A, ref float B)
         {
             float temp;
             temp = A;

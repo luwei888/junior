@@ -5,7 +5,7 @@ namespace MyGenericArray
 
     internal class GenericArray<T>
     {
-        private  T[] array;
+        private T[] array;
         internal GenericArray(int size)
         {
             array = new T[size + 1];
@@ -25,18 +25,29 @@ namespace MyGenericArray
     {
         static void Main(string[] args)
         {
-            GenericArray<int> intarray = new GenericArray<int>(12);
+            GenericArray<int> intArray = new GenericArray<int>(12);
             //设置array值
             for (int i = 0; i < 12; i++)
             {
-                intarray.SetItem(i, i);
+                intArray.SetItem(i, i);
             }
             //提取array值
             for (int j = 0; j < 12; j++)
             {
-                Console.WriteLine(intarray.GetItem(j));
+                Console.WriteLine(intArray.GetItem(j));
             }
+            Console.WriteLine();
 
+            GenericArray<string> strArray = new GenericArray<string>(13);
+            for (int i = 0; i < 12; i++)
+            {
+                strArray.SetItem(i, Convert.ToString(i));
+            }
+            //提取array值
+            for (int j = 0; j < 12; j++)
+            {
+                Console.WriteLine(strArray.GetItem(j));
+            }
             Console.ReadLine();
         }
     }
