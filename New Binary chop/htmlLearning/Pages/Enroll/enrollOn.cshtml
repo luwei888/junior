@@ -1,0 +1,103 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="file://C:/Users/Administrator/source/htmlLearn/FirstHtml/FirstHtml/picture/head.ico" rel="shortcut icon" />
+    <!--<link rel="shortcut icon" type="image/x-icon" href="../picture/bitbug_favicon (1).ico" />-->
+    <title>注册·一起帮</title>
+</head>
+<body>
+    <br />
+    <form action="/" method="post">
+        <img src="./pictur" alt="17bang" />
+        <select name="topButton">
+            <option value="help" selected>求助</option>
+            <option value="publish">发布</option>
+            <option value="list">列表</option>
+        </select>
+        <select name="topButton">
+            <option value="supervisor" selected>督促</option>
+            <option value="needSupervisor">求督促</option>
+            <option value="supervisorOther">督促别人</option>
+            <option value="mySupervisor">我的督促</option>
+        </select>
+        <select name="topButton">
+            <option value="article" selected>文章</option>
+            <option value="artlist">列表</option>
+        </select>
+        <select name="topButton">
+            <option value="notLogging" selected>未登录</option>
+            <option value="entry">登录</option>
+            <option value="enroll">注册</option>
+            <option value="forgetThePassword">忘记密码</option>
+        </select>
+        <hr />
+    </form>
+    <h1>®注册</h1>
+    <hr />
+    <a href="http://17bang.ren/FAQ/Account#invite">为什么需要邀请</a>
+    <form>
+        <br />
+        <b>邀请人：(*必填)</b>
+        <br />
+        <input type="text" name="邀请人" maxlength="16" size="35" placeholder="他的用户名，模糊查询只能从头开始" />
+
+        <br />
+        <b>邀请码：(*必填)</b>
+        <br />
+        <input type="password" name="邀请码" maxlength="4" size="35" placeholder="四位数字" />
+        <br />
+
+        <br />
+        <b>用户名：(*必填)</b>
+        <br />
+        <input type="text" name="用户名" maxlength="16" size="35" placeholder="登录用户名，可修改，不能重复" />
+
+        <br />
+        <b>密码：(*必填)</b>
+        <br />
+        <input type="password" name="密码" maxlength="18" size="35" placeholder="不小于4个字符" />
+        <br />
+
+        <b>验证码：(*必填)</b>
+        <br />
+        <input type="text" name="密码" maxlength="18" size="15" />
+        <br />
+
+        <!--<input type="submit" name="name" value="按钮" />-->
+        <!--    <a> <input type="checkbox" name="记住我" /> 记住我 </a>-->
+        <br />
+        <a href="http://17bang.ren/Password/Forget"> 提交</a>
+        <a href="http://17bang.ren/Register/Home?prepage=%2f"> 重置</a>
+        <a href="http://17bang.ren/Log/On?prepage=%2f">登录</a>
+
+    </form>
+    <br />
+    <br />
+    <h2>说明</h2>
+    <ol type="1">
+        <li>我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题</li>
+        <li>现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？</li>
+        <li>当然，你也可以在你熟悉的领域去帮助别人。由此而形成我们这个“你帮他他帮我我帮你，大家一起帮”的网上互助社区平台。</li>
+        <li>公平起见，我们还引入了 帮帮点/币/豆 三级概念，以记录和衡量社区成员的收获和贡献</li>
+        <li>赶快加入我们，赚取帮帮币吧！</li>
+        <li><a href="http://17bang.ren/About/Us">了解更多</a></li>
+    </ol>
+
+    <br />
+    <br />
+    <a href="http://17bang.ren/About/Us">关于我们</a>
+    <a href="http://17bang.ren/FAQ">常见问题</a>
+    <a href="http://17bang.ren/Suggest">意见建议</a>
+    <a href="http://17bang.ren/Notice">历史通知</a>
+    <a href="http://17bang.ren/Donate">友情捐赠</a>
+    <a href="http://17bang.ren/About/Fund">投资2018</a>
+
+    <s></s>
+</body>
+</html>
