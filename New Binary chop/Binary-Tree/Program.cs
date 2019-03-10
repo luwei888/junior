@@ -10,8 +10,10 @@ namespace Binary_Tree
         {
             Node Parent;
             //将所需插入的数据包装进节点
-            Node newNode = new Node();
-            newNode.date = date;
+            Node newNode = new Node
+            {
+                date = date
+            };
 
             //如果为空树，则插入根节点
             if (rootNode == null)

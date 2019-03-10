@@ -3,11 +3,11 @@
 namespace Bubble_Sort
 {
 
-    internal class RandomArray
+    public class RandomArray
     {
-        internal int[] array;
+        public int[] array;
 
-        internal RandomArray(int length)
+        public RandomArray(int length)
         {
             array = new int[length];
             for (int i = 0; i < length; i++)

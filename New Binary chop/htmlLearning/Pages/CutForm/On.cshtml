@@ -1,0 +1,41 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>首页·一起帮</title>
+</head>
+<body>
+    <br />
+    <form action="/" method="post">
+        <img src="./pictur" alt="17bang" />
+        <select name="topButton">
+            <option value="help" selected>求助</option>
+            <option value="publish">发布</option>
+            <option value="list">列表</option>
+        </select>
+        <select name="topButton">
+            <option value="supervisor" selected>督促</option>
+            <option value="needSupervisor">求督促</option>
+            <option value="supervisorOther">督促别人</option>
+            <option value="mySupervisor">我的督促</option>
+        </select>
+        <select name="topButton">
+            <option value="article" selected>文章</option>
+            <option value="artlist">列表</option>
+        </select>
+        <select name="topButton">
+            <option value="notLogging" selected>未登录</option>
+            <option value="entry">登录</option>
+            <option value="enroll">注册</option>
+            <option value="forgetThePassword">忘记密码</option>
+        </select>
+        <hr />
+    </form>
+</body>
+</html>
