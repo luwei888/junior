@@ -2,8 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <style>
+
+        .one {
+            border-style: solid;
+            border-width: 1px;
+        } 
+
+        div.one{
+            border-style:solid;
+            border-width:1px;
+        }
 
         .content {
             width: 100%;
@@ -43,41 +52,42 @@
 </head>
 <body>
     <header>
-        <br />
-        <form action="/" method="post">
-            <a href="http://17bang.ren/"><img style="color:black; position:fixed;top:28px;left:210px;" src="~/images/logo-big.ico" alt="17bang" /></a>
-            <p style="color:black; position:fixed;top:26px;left:280px;">
-                <span style="font-size:18px;font-weight:600;">一起帮</span>
-                <span>·网络互助平台</span>
-            </p>
-            <div style=" position:fixed;top:40px;right:580px;">
-                <select name="topButton">
-                    <option value="help" selected>求助</option>
-                    <option value="publish">发布</option>
-                    <option value="list">列表</option>
-                </select>
-                <select name="topButton">
-                    <option value="supervisor" selected>督促</option>
-                    <option value="needSupervisor">求督促</option>
-                    <option value="supervisorOther">督促别人</option>
-                    <option value="mySupervisor">我的督促</option>
-                </select>
-                <select name="topButton">
-                    <option value="article" selected>文章</option>
-                    <option value="artlist">列表</option>
-                </select>
-                <select name="topButton">
-                    <option value="notLogging" selected>未登录</option>
-                    <option value="entry">登录</option>
-                    <option value="enroll">注册</option>
-                    <option value="forgetThePassword">忘记密码</option>
-                </select>
-            </div>
+        <div class="one">
             <br />
-            <br />
-            <br />
-
-        </form>
+            <form action="/" method="post">
+                <a href="http://17bang.ren/"><img style="color:black; position:fixed;top:28px;left:210px;" src="~/images/logo-big.ico" alt="17bang" /></a>
+                <p style="color:black; position:fixed;top:26px;left:280px;">
+                    <span style="font-size:18px;font-weight:600;">一起帮</span>
+                    <span>·网络互助平台</span>
+                </p>
+                <div style=" position:fixed;top:40px;right:580px;">
+                    <select name="topButton">
+                        <option value="help" selected>求助</option>
+                        <option value="publish">发布</option>
+                        <option value="list">列表</option>
+                    </select>
+                    <select name="topButton">
+                        <option value="supervisor" selected>督促</option>
+                        <option value="needSupervisor">求督促</option>
+                        <option value="supervisorOther">督促别人</option>
+                        <option value="mySupervisor">我的督促</option>
+                    </select>
+                    <select name="topButton">
+                        <option value="article" selected>文章</option>
+                        <option value="artlist">列表</option>
+                    </select>
+                    <select name="topButton">
+                        <option value="notLogging" selected>未登录</option>
+                        <option value="entry">登录</option>
+                        <option value="enroll">注册</option>
+                        <option value="forgetThePassword">忘记密码</option>
+                    </select>
+                </div>
+                <br />
+                <br />
+                <br />
+            </form>
+        </div>
     </header>
 
     <div style="margin-left:200px;margin-right:200px;">
@@ -123,7 +133,7 @@
                     <input type="submit" name="name" value="提交" />
                     <a> <input type="checkbox" name="记住我" /> 记住我 </a>
                     <br />
-                    <a href="http://17bang.ren/Register/Home?prepage=%2f"> 重置</a>
+                    <input type="reset" value="重置"/>
                     <a href="http://17bang.ren/Log/On?prepage=%2f">登录</a>
                 </div>
             </form>
