@@ -5,15 +5,50 @@
     <style>
         a:link {
             text-decoration: none;
-        }  
+        }
+
         p.boder {
             border-style: solid;
             border-width: 1px;
-        } 
+        }
 
-        div.boder{
-            border-style:solid;
-            border-width:1px;
+        header li {
+          width:10px;
+          height:10px;
+           margin:8px;
+            display: inline;
+            color:black;
+        }
+        header.fixed-top {
+            top: 0px;
+        }
+
+        div.pull-left {
+            float: left;
+        }
+
+        div.float-right{
+            float:right;
+            margin-top:10px;
+            margin-right:40px;
+        }
+
+        img.float-left {
+            margin-left:40px;
+            float: left;
+            width: 48px;
+            height: 48px;
+        }
+
+        header.border {
+            border-style: groove;
+            border-width: 0.5px;
+        }
+
+        p.float-left{
+            float:left;
+            margin-top:20px;
+            margin-left:10px;
         }
 
         p.content {
@@ -49,67 +84,36 @@
     </style>
     <meta charset="utf-8" />
     <link href="~/images/logo-big.ico" rel="shortcut icon" />
-    <!--<link rel="shortcut icon" type="image/x-icon" href="../picture/bitbug_favicon (1).ico" />-->
     <title>用户登录·一起帮</title>
 </head>
-<body>
-    <header>
-        <div class="one">
-            <br />
-            <form action="/" method="post">
-                <a href="http://17bang.ren/"><img style="color:black; position:fixed;top:28px;left:210px;" src="~/images/logo-big.ico" alt="17bang" /></a>
-                <p style="color:black; position:fixed;top:26px;left:280px;">
-                    <span style="font-size:18px;font-weight:600;">一起帮</span>
-                    <span>·网络互助平台</span>
-                </p>
-                <div style=" position:fixed;top:40px;right:580px;">
-                    <select name="topButton">
-                        <option value="help" selected>求助</option>
-                        <option value="publish">发布</option>
-                        <option value="list">列表</option>
-                    </select>
-                    <select name="topButton">
-                        <option value="supervisor" selected>督促</option>
-                        <option value="needSupervisor">求督促</option>
-                        <option value="supervisorOther">督促别人</option>
-                        <option value="mySupervisor">我的督促</option>
-                    </select>
-                    <select name="topButton">
-                        <option value="article" selected>文章</option>
-                        <option value="artlist">列表</option>
-                    </select>
-                    <select name="topButton">
-                        <option value="notLogging" selected>未登录</option>
-                        <option value="entry">登录</option>
-                        <option value="enroll">注册</option>
-                        <option value="forgetThePassword">忘记密码</option>
-                    </select>
-                </div>
-                <br />
-                <br />
-                <br />
-            </form>
+<body style="margin:0px;">
+    <header class="padding fixed-top border" style="height:72px;top:0; background-color: #f8f8f8;">
+        <div style="margin-left:160px;margin-right:160px;">
+            <a href="http://17bang.ren/"><img class="float-left" style="color:black; margin:8px; margin-left:40px; " src="~/images/logo-big.ico" alt="17bang" /></a>
+            <p class="float-left" style="color:black;">
+                <span style="font-size:18px;font-weight:600;">一起帮</span>
+                <span>·网络互助平台</span>
+            </p>
+            <div class="float-right"   >
+                <ol >
+                    <li> 求助</li>
+                    <li> 督促</li>
+                    <li> 文章</li>
+                    <li> App下载</li>
+                    <li>未登录</li>
+                </ol>
+            </div>
         </div>
     </header>
 
     <div style="margin-left:200px;margin-right:200px;">
-        <h1>用户登录</h1>
-        <hr />
+        <div style="border-bottom: 1px solid #eee;">
+            <h1 style="margin-left:30px;">用户登录</h1>
+        </div>
 
-        <div>
+        <div style="width:300px;height:400px; float:left; margin-left:100px; ">
             <form>
-                <!--<br />-->
-                <!--<b>邀请-->
-                <!--人：(*必填)</b>
-            <br />
-            <input type="text" name="邀请人" maxlength="16" size="35" placeholder="他的用户名，模糊查询只能从头开始" />
-
-            <br />
-            <b>邀请码：(*必填)</b>
-            <br />
-            <input type="password" name="邀请码" maxlength="4" size="35" placeholder="四位数字" />
-            <br />-->
-                <div style="width:450px;height:2000px;position:fixed;top:180px;left:250px; ">
+                <div>
                     <br />
                     <br />
                     <b>用户名：(*必填)</b>
@@ -131,18 +135,14 @@
                     <input type="text" name="密码" maxlength="18" size="15" />
                     <br />
                     <br />
-
                     <input type="submit" name="name" value="提交" />
+                    <input type="reset" value="重置" />
                     <a> <input type="checkbox" name="记住我" /> 记住我 </a>
-                    <br />
-                    <input type="reset" value="重置"/>
                     <a href="http://17bang.ren/Log/On?prepage=%2f">登录</a>
                 </div>
             </form>
         </div>
-        <div style="position:fixed;top:150px;right:450px; word-break:break-all ;width:450px;height:2000px;">
-            <br />
-            <br />
+        <div style="float:right; word-break:break-all ;width:450px;height:500px; margin-right:150px;">
             <h2>说明</h2>
             <div>
                 <ol class="content" type="1">
