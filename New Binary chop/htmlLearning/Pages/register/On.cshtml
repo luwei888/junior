@@ -1,4 +1,7 @@
 ﻿@page
+@{
+    Layout = null;
+}
 
 <!DOCTYPE html>
 <html>
@@ -11,17 +14,15 @@
         }
 
         .dropdown-content {
-            list-style-type: none;
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 80px;
+            min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            margin-left:-56px;
-            padding: 0;
+            padding: 12px 16px;
         }
 
-        .dropdown:active.dropdown-content {
+        .dropdown:hover .dropdown-content {
             display: block;
         }
 
@@ -140,16 +141,16 @@
                 <span style="font-size:18px;font-weight:600;">一起帮</span>
                 <span>·网络互助平台</span>
             </p>
-            <div class="float-right" style="margin-top:22px;">
-                <ul style="clear:both;display: inline;padding:15px;">
-                    <li class="dropdown"style="margin-right:20px;">
+            <div class="float-right" >
+                <ul style="clear:both;display: inline;">
+                    <li class="dropdown">
                         <span>求助</span>
-                        <ul class="dropdown-content" style="margin-right:20px;">
+                        <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Problem/New">帮助</a></li>
                             <li><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown" style="margin-right:20px;">
+                    <li class="dropdown">
                         <span>督促</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -158,7 +159,7 @@
                             <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown" style="margin-right:20px;">
+                    <li class="dropdown">
                         <span>文章</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -167,7 +168,7 @@
                             <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown" style="margin-right:20px;">
+                    <li class="dropdown">
                         <span>App下载</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -176,7 +177,7 @@
                             <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown" style="margin-right:20px;">
+                    <li class="dropdown">
                         <span>未登录</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -274,6 +275,6 @@
 
         </footer>
     </div>
-
+   
 </body>
 </html>
