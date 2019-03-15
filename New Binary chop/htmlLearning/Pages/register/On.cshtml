@@ -14,15 +14,21 @@
         }
 
         .dropdown-content {
+            list-style-type: none;
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 160px;
+            min-width: 100px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 12px 16px;
+            margin-left: -56px;
+            padding: 0;
         }
 
-        .dropdown:hover .dropdown-content {
+            .dropdown-content > li {
+                margin: 6px,0px;
+            }
+
+        .dropdown:active.dropdown-content {
             display: block;
         }
 
@@ -73,6 +79,7 @@
 
         a.prepageBack {
             float: right;
+            margin: 8px;
             padding: 5px 7px;
             background-color: #7fffd4
         }
@@ -133,24 +140,30 @@
     <link href="~/images/logo-big.ico" rel="shortcut icon" />
     <title>注册·一起帮</title>
 </head>
+
 <body style="margin:0px;">
+
     <header class="padding fixed-top border" style="height:72px;top:0; background-color: #f8f8f8;">
+
         <div style="margin-left:160px;margin-right:160px;">
+
             <a href="http://17bang.ren/"><img class="float-left" style="color:black; margin:8px; margin-left:40px; " src="~/images/logo-big.ico" alt="17bang" /></a>
-            <p class="float-left" style="color:black;">
+
+            <span style="color:black; float: left; margin-top: 20px;">
                 <span style="font-size:18px;font-weight:600;">一起帮</span>
                 <span>·网络互助平台</span>
-            </p>
-            <div class="float-right" >
-                <ul style="clear:both;display: inline;">
-                    <li class="dropdown">
+            </span>
+
+            <div class="float-right" style="margin-top:22px;">
+                <ul style="clear:both;display: inline;padding:15px;">
+                    <li class="dropdown" style="margin-right:20px;">
                         <span>求助</span>
-                        <ul class="dropdown-content">
+                        <ul class="dropdown-content" style="margin-right:20px;">
                             <li><a href="http://17bang.ren/Problem/New">帮助</a></li>
                             <li><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" style="margin-right:20px;">
                         <span>督促</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -159,7 +172,7 @@
                             <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" style="margin-right:20px;">
                         <span>文章</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -168,7 +181,7 @@
                             <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" style="margin-right:20px;">
                         <span>App下载</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -177,7 +190,7 @@
                             <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" style="margin-right:20px;">
                         <span>未登录</span>
                         <ul class="dropdown-content">
                             <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
@@ -187,18 +200,22 @@
                         </ul>
                     </li>
                 </ul>
+
+            </div>
+
+        </div>
+
+        <div class="information" style="margin-top:74px;">
+            <div style="width:1130px;height:22px;text-align:center">
+                <span style="float :left; margin-left:40px;">文章</span>
             </div>
         </div>
     </header>
 
-    <div class="information">
-        <div style="width:1130px;height:22px;text-align:center">
-            <span style="float :left; margin-left:40px;">文章</span>
-        </div>
-    </div>
+    <main style="margin-left:200px;margin-right:200px;">
 
-    <div style="margin-left:200px;margin-right:200px;">
         <form action="/" method="post">
+
             <div style="border-bottom: 1px solid #eee;">
                 <a class="prepageBack" href="http://17bang.ren/">返回</a>
                 <h1 style="margin-left:30px;"><span style="margin:6px;">®</span>注册</h1>
@@ -218,9 +235,6 @@
                         <input type="text" name="用户名" maxlength="16" size="35" placeholder="4位数字    " />
                     </div>
                 </div>
-
-                <a class="help" href="http://17bang.ren/Contact/Us">帮助</a>
-                <a class="feedBake" href="http://17bang.ren/Suggest/New">反馈</a>
 
                 <div style=" float:left;  ">
 
@@ -244,8 +258,11 @@
                         <a> <input type="checkbox" name="记住我" /> 记住我 </a>
                         <a href="http://17bang.ren/Log/On?prepage=%2f">登录</a>
                     </div>
+
                 </div>
+
             </div>
+
         </form>
 
         <div style="float:right; word-break:break-all ;width:450px;height:450px; margin-right:150px;top:20px;">
@@ -262,19 +279,24 @@
             </div>
         </div>
 
-        <footer style="border-top: 1px solid #eee; clear:both;">
-            <a href="http://17bang.ren/About/Us">关于我们</a>
-            <a href="http://17bang.ren/FAQ">常见问题</a>
-            <a href="http://17bang.ren/Suggest">意见建议</a>
-            <a href="http://17bang.ren/Notice">历史通知</a>
-            <a href="http://17bang.ren/Donate">友情捐赠</a>
-            <a href="http://17bang.ren/About/Fund">投资2018</a>
-            <p style="margin:0px;">友情链接：</p>
-            <p style="float:right;"> <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=3M9momYC1HM1ulxwazjU5-GeLE9OnS_Yqdjt6XwDme18KAb8IgoD!-2108032504">渝ICP备18007191号（备案）</a>© 2019 - 首顾科技 </p>
-            <br />
+        <div>
+            <a class="help" href="http://17bang.ren/Contact/Us">帮助</a>
+            <a class="feedBake" href="http://17bang.ren/Suggest/New">反馈</a>
+        </div>
 
-        </footer>
-    </div>
-   
+    </main>
+
+    <footer style="border-top: 1px solid #eee; clear:both; margin-left:200px;margin-right:200px;">
+        <a href="http://17bang.ren/About/Us">关于我们</a>
+        <a href="http://17bang.ren/FAQ">常见问题</a>
+        <a href="http://17bang.ren/Suggest">意见建议</a>
+        <a href="http://17bang.ren/Notice">历史通知</a>
+        <a href="http://17bang.ren/Donate">友情捐赠</a>
+        <a href="http://17bang.ren/About/Fund">投资2018</a>
+        <p style="margin:0px;">友情链接：</p>
+        <p style="float:right;"> <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=3M9momYC1HM1ulxwazjU5-GeLE9OnS_Yqdjt6XwDme18KAb8IgoD!-2108032504">渝ICP备18007191号（备案）</a>© 2019 - 首顾科技 </p>
+        <br />
+    </footer>
+
 </body>
 </html>
