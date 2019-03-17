@@ -1,131 +1,246 @@
 ﻿<!DOCTYPE html>
-<html>
+<html height: 100%;>
 <head>
     <style>
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+          .dropdown {
+              position: relative;
+              display: inline-block;
+          }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 12px 16px;
-        }
+          .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              padding: 12px 16px;
+          }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
 
-        a:link {
-            text-decoration: none;
-        }
+          body {
+              display: flex;
+              flex-direction: column;
+              height: 100%;
+          }
 
-        p.boder {
-            border-style: solid;
-            border-width: 1px;
-        }
+          header {
+              /* 我们希望 header 采用固定的高度，只占用必须的空间 */
+              /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+              flex: 0 0 auto;
+          }
 
-        header li {
-            color: black;
-        }
+          .main-content {
+              /* 将 flex-grow 设置为1，该元素会占用全部可使用空间
+        而其他元素该属性值为0，因此不会得到多余的空间*/
+              /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+              flex: 1 0 auto;
+          }
 
-        header.fixed-top {
-            top: 0px;
-        }
+          footer {
+              /* 和 header 一样，footer 也采用固定高度*/
+              /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+              flex: 0 0 auto;
+          }
 
-        div.pull-left {
-            float: left;
-        }
+          .dropdown:hover .dropdown-content {
+              display: block;
+          }
 
-        div.float-right {
-            float: right;
-            margin-top: 10px;
-            margin-right: 40px;
-        }
+          a:link {
+              text-decoration: none;
+          }
 
-        img.float-left {
-            margin-left: 40px;
-            float: left;
-            width: 48px;
-            height: 48px;
-        }
+          p.boder {
+              border-style: solid;
+              border-width: 1px;
+          }
 
-        header.border {
-            border-style: groove;
-            border-width: 0.5px;
-        }
+          header li {
+              color: black;
+          }
 
-        p.float-left {
-            float: left;
-            margin-top: 20px;
-            margin-left: 10px;
-        }
+          header.fixed-top {
+              top: 0px;
+          }
 
-        a.prepageBack {
-            float: right;
-            padding: 5px 7px;
-            background-color: #7fffd4
-        }
+          div.pull-left {
+              float: left;
+          }
 
-        p.content {
-            width: 100%;
-            height: auto;
-            word-wrap: break-word;
-            word-break: break-all;
-            overflow: hidden;
-        }
+          div.float-right {
+              float: right;
+              margin-top: 10px;
+              margin-right: 40px;
+          }
 
-        header {
-            color: ivory;
-            background-color: aliceblue;
-        }
+          img.float-left {
+              margin-left: 40px;
+              float: left;
+              width: 48px;
+              height: 48px;
+          }
 
-        a.feedBake {
-            position: fixed;
-            top: 340px;
-            right: 200px;
-            padding: 5px 7px;
-            background-color: #7fffd4
-        }
+          header.border {
+              border-style: groove;
+              border-width: 0.5px;
+          }
 
-        div.information {
-            margin-top: 2px;
-            margin-left: 190px;
-            margin-right: 190px;
-            background-color: #eee;
-        }
+          p.float-left {
+              float: left;
+              margin-top: 20px;
+              margin-left: 10px;
+          }
 
-        a.help {
-            position: fixed;
-            top: 300px;
-            right: 200px;
-            padding: 5px 7px;
-            background-color: #7fffd4
-        }
+          a.prepageBack {
+              float: right;
+              padding: 5px 7px;
+              background-color: #7fffd4
+          }
 
-        div.invitation {
-            border: 2px dashed #eee;
-            float: left;
-            background-color: #ffffe0;
-            width: 270px;
-            height: 140px;
-        }
+          p.content {
+              width: 100%;
+              height: auto;
+              word-wrap: break-word;
+              word-break: break-all;
+              overflow: hidden;
+          }
 
-        a:link {
-            color: blueviolet;
-        }
+          header {
+              color: ivory;
+              background-color: aliceblue;
+          }
 
-        a:hover {
-            color: #FF00FF;
-        }
+          a.feedBake {
+              position: fixed;
+              top: 340px;
+              right: 187px;
+              padding: 5px 7px;
+              background-color: #7fffd4
+          }
+
+          div.information {
+              margin-top: 2px;
+              margin-left: 175px;
+              margin-right: 175px;
+              background-color: #eee;
+          }
+
+          a.help {
+              position: fixed;
+              top: 300px;
+              right: 187px;
+              padding: 5px 7px;
+              background-color: #7fffd4
+          }
+
+          div.invitation {
+              border: 2px dashed #eee;
+              float: left;
+              background-color: #ffffe0;
+              width: 270px;
+              height: 140px;
+          }
+
+          a:link {
+              
+          }
+
+          a:hover {
+              color: #FF00FF;
+          }
     </style>
 </head>
-<body>
-        @RenderBody()
+
+<body style="margin:0px;">
+
+    <header class="padding fixed-top border" style="height:72px;top:0; background-color: #f8f8f8;">
+
+        <div style="margin-left:160px;margin-right:160px;">
+
+            <a href="http://17bang.ren/"><img class="float-left" style="color:black; margin:8px; margin-left:40px; " src="~/images/logo-big.ico" alt="17bang" /></a>
+
+            <span style="color:black; float: left; margin-top: 20px;">
+                <span style="font-size:18px;font-weight:600;">一起帮</span>
+                <span>·网络互助平台</span>
+            </span>
+
+            <div class="float-right" style="margin-top:22px;">
+                <ul style="clear:both;display: inline;padding:15px;">
+                    <li class="dropdown" style="margin-right:20px;">
+                        <span>求助</span>
+                        <ul class="dropdown-content" style="margin-right:20px;">
+                            <li><a href="http://17bang.ren/Problem/New">帮助</a></li>
+                            <li><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" style="margin-right:20px;">
+                        <span>督促</span>
+                        <ul class="dropdown-content">
+                            <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
+                            <li><a href="http://17bang.ren/Plan">督促别人</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" style="margin-right:20px;">
+                        <span>文章</span>
+                        <ul class="dropdown-content">
+                            <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
+                            <li><a href="http://17bang.ren/Plan">督促别人</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" style="margin-right:20px;">
+                        <span>App下载</span>
+                        <ul class="dropdown-content">
+                            <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
+                            <li><a href="http://17bang.ren/Plan">督促别人</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" style="margin-right:20px;">
+                        <span>未登录</span>
+                        <ul class="dropdown-content">
+                            <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
+                            <li><a href="http://17bang.ren/Plan">督促别人</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></li>
+                            <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div>
+                <a class="help" href="http://17bang.ren/Contact/Us">帮助</a>
+                <a class="feedBake" href="http://17bang.ren/Suggest/New">反馈</a>
+            </div>
+        </div>
+
+        <div class="information" style="margin-top:74px;">
+            <div style="width:1130px;height:22px;text-align:center">
+                <span style="float :left; margin-left:40px; color:black;">  欢迎 chaidawei ① 加入“一起帮”！记得完成“新手任务”获得 帮帮点 奖励哟。O(∩_∩)O~</span>
+                <a style="float:right;" href="http://17bang.ren/Message/Index">全部消息</a>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="indent" style="border-top: 1px solid #eee; clear:both; ">
+        <a href="http://17bang.ren/About/Us">关于我们</a>
+        <a href="http://17bang.ren/FAQ">常见问题</a>
+        <a href="http://17bang.ren/Suggest">意见建议</a>
+        <a href="http://17bang.ren/Notice">历史通知</a>
+        <a href="http://17bang.ren/Donate">友情捐赠</a>
+        <a href="http://17bang.ren/About/Fund">投资2018</a>
+        <p style="margin:0px;">友情链接：</p>
+        <p style="float:right;"> <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=3M9momYC1HM1ulxwazjU5-GeLE9OnS_Yqdjt6XwDme18KAb8IgoD!-2108032504">渝ICP备18007191号（备案）</a>© 2019 - 首顾科技 </p>
+        <br />
+    </footer>
+
 </body>
+
 </html>

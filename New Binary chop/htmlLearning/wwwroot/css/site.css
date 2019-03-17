@@ -1,37 +1,148 @@
-/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
-for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+
+#leftword {
+    float: left;
+    padding: 0px 15px;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.indent {
+    margin-top: 70px;
+    margin-left: 180px;
+    margin-right: 180px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+#keyWord {
+    color: aquamarine;
+    margin-bottom: 30px;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+hr {
+    border-top: 1px solid #eee;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.keyWord {
+    display: block;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    border: 2px dashed #eee;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+.flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.font-color {
+    color: black;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.word {
+    margin: 5px 20px 5px 0;
+    padding: 3px 7px;
+    display: inline-block;
+    background-color: #777;
+    border-radius: 10px;
+    font-weight: bold
+}
+
+.wordLink {
+    color: white;
+}
+
+#sightGlass {
+    border-left: 6px solid gray;
+    margin-bottom: 20px;
+    width: 744px;
+    height: 31px;
+}
+
+pull-left {
+    float: left;
+}
+
+pull-right {
+    float: right;
+}
+
+.fa {
+    color: #777;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    width: 730px;
+    height: 153px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+small {
+    font-size: 80%;
+    color: #777;
+}
+
+#divLink {
+    font-size: 75%;
+    margin-bottom: 5px;
+}
+
+.status {
+    color: black;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin-top: 35px;
+}
+
+    ul.pagination li {
+        display: inline;
     }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+            ul.pagination li a.active {
+                background-color: #337ab7;
+                color: white;
+            }
+
+            ul.pagination li a:hover:not(.active) {
+                background-color: #ddd;
+            }
+
+#rightWord {
+   width: 328px;height: 320px;float:right;
+}
+
+#article {
+    border: 1px dashed #eee;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+.active span{
+   background-color:black;
+}
+
+.blockWord{
+    display:block;
 }
