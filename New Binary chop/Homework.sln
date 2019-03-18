@@ -31,7 +31,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DateStructure", "DateStruct
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RecursionbynaryAdd", "RecursionbynaryAdd", "{0F7A177B-AE16-4E31-BAA3-5CB2562878D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BynaryAdd", "BynaryAdd\BynaryAdd.csproj", "{46241CC0-E986-42F6-88B0-E8129BC44EC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BynaryAdd", "BynaryAdd\BynaryAdd.csproj", "{46241CC0-E986-42F6-88B0-E8129BC44EC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17bang", "17bang\17bang.csproj", "{4EB69609-6041-4D7D-AA99-5CCF28D458A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{46241CC0-E986-42F6-88B0-E8129BC44EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46241CC0-E986-42F6-88B0-E8129BC44EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46241CC0-E986-42F6-88B0-E8129BC44EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB69609-6041-4D7D-AA99-5CCF28D458A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB69609-6041-4D7D-AA99-5CCF28D458A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB69609-6041-4D7D-AA99-5CCF28D458A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB69609-6041-4D7D-AA99-5CCF28D458A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

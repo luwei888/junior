@@ -3,157 +3,156 @@
 <head>
     <style>
 
-          .dropdown {
-              position: relative;
-              display: inline-block;
-          }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-          .dropdown-content {
-              display: none;
-              position: absolute;
-              background-color: #f9f9f9;
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              padding: 12px 16px;
-          }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+        }
 
 
-          body {
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-          }
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-          header {
-              /* 我们希望 header 采用固定的高度，只占用必须的空间 */
-              /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-              flex: 0 0 auto;
-          }
+        header {
+            /* 我们希望 header 采用固定的高度，只占用必须的空间 */
+            /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+            flex: 0 0 auto;
+        }
 
-          .main-content {
-              /* 将 flex-grow 设置为1，该元素会占用全部可使用空间
+        .main-content {
+            /* 将 flex-grow 设置为1，该元素会占用全部可使用空间
         而其他元素该属性值为0，因此不会得到多余的空间*/
-              /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
-              flex: 1 0 auto;
-          }
+            /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+            flex: 1 0 auto;
+        }
 
-          footer {
-              /* 和 header 一样，footer 也采用固定高度*/
-              /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-              flex: 0 0 auto;
-          }
+        footer {
+            /* 和 header 一样，footer 也采用固定高度*/
+            /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+            flex: 0 0 auto;
+        }
 
-          .dropdown:hover .dropdown-content {
-              display: block;
-          }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-          a:link {
-              text-decoration: none;
-          }
+        a:link {
+            text-decoration: none;
+        }
 
-          p.boder {
-              border-style: solid;
-              border-width: 1px;
-          }
+        p.boder {
+            border-style: solid;
+            border-width: 1px;
+        }
 
-          header li {
-              color: black;
-          }
+        header li {
+            color: black;
+        }
 
-          header.fixed-top {
-              top: 0px;
-          }
+        header.fixed-top {
+            top: 0px;
+        }
 
-          div.pull-left {
-              float: left;
-          }
+        div.pull-left {
+            float: left;
+        }
 
-          div.float-right {
-              float: right;
-              margin-top: 10px;
-              margin-right: 40px;
-          }
+        div.float-right {
+            float: right;
+            margin-top: 10px;
+            margin-right: 40px;
+        }
 
-          img.float-left {
-              margin-left: 40px;
-              float: left;
-              width: 48px;
-              height: 48px;
-          }
+        img.float-left {
+            margin-left: 40px;
+            float: left;
+            width: 48px;
+            height: 48px;
+        }
 
-          header.border {
-              border-style: groove;
-              border-width: 0.5px;
-          }
+        header.border {
+            border-style: groove;
+            border-width: 0.5px;
+        }
 
-          p.float-left {
-              float: left;
-              margin-top: 20px;
-              margin-left: 10px;
-          }
+        p.float-left {
+            float: left;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
 
-          a.prepageBack {
-              float: right;
-              padding: 5px 7px;
-              background-color: #7fffd4
-          }
+        a.prepageBack {
+            float: right;
+            padding: 5px 7px;
+            background-color: #7fffd4
+        }
 
-          p.content {
-              width: 100%;
-              height: auto;
-              word-wrap: break-word;
-              word-break: break-all;
-              overflow: hidden;
-          }
+        p.content {
+            width: 100%;
+            height: auto;
+            word-wrap: break-word;
+            word-break: break-all;
+            overflow: hidden;
+        }
 
-          header {
-              color: ivory;
-              background-color: aliceblue;
-          }
+        header {
+            color: ivory;
+            background-color: aliceblue;
+        }
 
         a.feedBake {
             position: fixed;
             top: 340px;
             right: 158px;
             padding: 5px 7px;
-            background-color: #7fffd4 ;
+            background-color: #7fffd4;
             border-bottom-left-radius: 6px;
             border-top-right-radius: 6px;
         }
 
-          div.information {
-              margin-top: 2px;
-              width:1130px;
-              margin-left: auto;
-              margin-right: auto;
-              background-color: #eee;
-          }
+        div.information {
+            margin-top: 2px;
+            width: 1130px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #eee;
+        }
 
         a.help {
             position: fixed;
             top: 300px;
             right: 158px;
             padding: 5px 7px;
-            background-color: #7fffd4 ;
+            background-color: #7fffd4;
             border-bottom-left-radius: 6px;
             border-top-right-radius: 6px;
         }
 
-          div.invitation {
-              border: 2px dashed #eee;
-              float: left;
-              background-color: #ffffe0;
-              width: 270px;
-              height: 140px;
-          }
+        div.invitation {
+            border: 2px dashed #eee;
+            float: left;
+            background-color: #ffffe0;
+            width: 270px;
+            height: 140px;
+        }
 
-          a:link {
-              
-          }
+        a:link {
+        }
 
-          a:hover {
-              color: #FF00FF;
-          }
+        a:hover {
+            color: #FF00FF;
+        }
     </style>
 </head>
 
