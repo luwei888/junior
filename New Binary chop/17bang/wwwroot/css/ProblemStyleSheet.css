@@ -3,3 +3,31 @@
 h2  {
     color:aqua;
 }
+
+#discuss {
+    background-color: #efe0e0;
+    border-radius: 5px 6px;
+    padding: 4px 12px;
+    width: 80%;
+}
+
+#star{
+   color:red;
+   margin-top:2px;
+}
+
+#replay{
+    margin:40px 0px;
+    width:750px;
+    height:328px;
+}
+
+#tag {
+    font-size: 75%;
+    margin-bottom: 5px;
+}
+
+#replay p{
+    margin:10px 1px;
+}
+

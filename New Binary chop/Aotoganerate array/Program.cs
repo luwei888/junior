@@ -167,12 +167,9 @@ namespace Homework_set
         }
     }
 
-    
-
     public class HomeworkFunction
-    {   
-        
-        
+    {
+
         static void MiniGame(int guess)
         {
             int random = new Random().Next(500);
