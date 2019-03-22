@@ -27,7 +27,6 @@ namespace Bubble_Sort
             B = temp;
         }
 
-
         static void Main(string[] args)
         {
             int length = 20;

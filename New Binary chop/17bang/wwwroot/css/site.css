@@ -88,6 +88,7 @@ a:hover {
     height: 183px;
     margin-bottom: 10px;
     padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
 }
 
 small {

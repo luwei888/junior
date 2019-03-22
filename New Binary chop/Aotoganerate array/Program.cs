@@ -288,7 +288,7 @@ namespace Homework_set
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }

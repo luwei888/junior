@@ -3,6 +3,7 @@ namespace Datetime
 {
     class Program
     {
+        int number =8;
         static void datetime1(int year, int month, int day)
         {
             DateTime dateTime = new DateTime(year, month, day);
@@ -10,8 +11,8 @@ namespace Datetime
         }
         protected  enum Date
             {
-                周 ,
-                天 ,
+                周=1 ,
+                天=3 ,
                 月
             }
         static void Main(string[] args)
