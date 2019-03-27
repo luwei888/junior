@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[TProblem] (
-    [Id]              INT            IDENTITY (5, 5) NOT NULL,
+    [Id]              INT            IDENTITY (5, 3) NOT NULL,
     [Title]           VARCHAR (20)   NULL,
-    [Content]         NVARCHAR (MAX) NULL,
+    [Content]         NTEXT NULL,
     [NeedRemoteHelp]  BIT            DEFAULT ((1)) NULL,
     [Reward]          INT            NULL,
     [PublishDateTime] DATETIME       NULL,
