@@ -2,65 +2,30 @@
 
 namespace Demo
 {
-    class Beauty
-    {
-
-        public string GetFirstName()
-        {
-            return FirstName;
-        }
-
-        public void SetFristName(string newFirstName)
-        {
-            FirstName = newFirstName;
-        }
-
-        private string FirstName;
-
-
-    }
-
-    class Beauty2
-    {
-
-        private string _FirstName;
-
-        public string FirstName
-        {
-            get
-            {
-                return _FirstName;
-            }
-            set
-            {
-                _FirstName = value;
-            }
-        }
-    }
-    
-    class Beauty3
-    {
-        public string FirstName { get; set; }
-    }
 
     class Program
     {
+
+        static (string Name, int Age, bool Marry) littleSister(string name, int age, bool marry)
+        {
+            string Name = name;
+
+            int Age = age;
+
+            bool Marry = marry;
+
+            return (Name, Age, Marry);
+
+        }
+
         static void Main(string[] args)
         {
+            var beauty = littleSister("莎莎", 18, false);
 
-            Beauty lin = new Beauty();
-            lin .SetFristName("Enya");
-            lin .GetFirstName();
-            Console.WriteLine(lin.GetFirstName());
+            Console.WriteLine($"{beauty.Name}小姐姐芳龄{beauty .Age}岁，婚否？{beauty .Marry} ");
 
-            Beauty2 wang = new Beauty2();
-            wang.FirstName="wang";
-            Console.WriteLine(wang.FirstName);
-
-            Beauty3 liu = new Beauty3();
-            liu.FirstName = "liu";
-            Console.WriteLine(liu.FirstName);
             Console.ReadLine();
+
         }
     }
 }

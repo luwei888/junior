@@ -43,7 +43,7 @@ class Program
         //高射炮开火
         airDefense = new FlakAirDefense();
         enemyFighter(airDefense);
-
+        
 
         Console.ReadLine();
     }

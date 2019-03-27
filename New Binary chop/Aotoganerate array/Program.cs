@@ -1,6 +1,7 @@
 ﻿using System;
 using CQ = China.ChongQing.pretty;
 using TW = China.Taiwanese.pretty;
+using System.Threading;
 namespace Homework_set
 {
     public class ImitateStack
@@ -128,6 +129,7 @@ namespace Homework_set
             }
         }
     }
+
     class SunArray:FatherArray
     {
         static int[] GetAutoArray(int length = 10, int step = 5, int first = 10)
@@ -143,9 +145,13 @@ namespace Homework_set
             return array;
         }
     }
-    class DoblueDmensionalArray:FatherArray
+
+    class DoblueDmensionalArray
     {
-        internal int[,] GetDoubleDimensionalArray(int x, int y)
+
+        internal int[,] array;
+
+        internal int[,] GetArray(int x, int y)
         {
             //int add1 = 1;
             int[,] array = new int[x, y];
@@ -159,7 +165,7 @@ namespace Homework_set
                 {
                     //add2 += add2;
                     //array[i, j] = add2;
-                    array[i, j] = i + j;
+                    array[i, j] = new Random().Next (1000);
                     Console.Write($"{array[i, j]}" + "     ");
                 }
             }
@@ -288,7 +294,10 @@ namespace Homework_set
     {
         static void Main(string[] args)
         {
-            
+            Thread.Sleep(5);
+            DoblueDmensionalArray doblueDmensionalArray = new DoblueDmensionalArray();
+            doblueDmensionalArray.GetArray(5, 6);
+            Console.ReadLine();
         }
     }
 }
@@ -323,6 +332,7 @@ namespace China.Taiwanese.pretty
         internal int FaceScore { get; set; } = 70;
     }
 }
+
 namespace China.ChongQing.pretty
 {
     struct Pretty
