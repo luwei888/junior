@@ -8,4 +8,3 @@
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [CK_TProblem_Column] CHECK ((1) = (1))
 );
-
