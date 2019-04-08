@@ -43,7 +43,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quick-Sort", "Quick-Sort\Qu
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "17bangSQLServer", "..\17bangSQLServer\17bangSQLServer.sqlproj", "{2A907CB7-476B-462D-BDAA-E5D38E13D4EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer", "..\SQLServer\SQLServer.csproj", "{66FCF71B-2D49-4501-9705-304A3B1CEB9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLServer", "..\SQLServer\SQLServer.csproj", "{66FCF71B-2D49-4501-9705-304A3B1CEB9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
