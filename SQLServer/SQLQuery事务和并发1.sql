@@ -1,0 +1,22 @@
+﻿
+--事务和并发 
+
+
+CREATE TABLE TRegister
+(
+    [Id] INT PRIMARY KEY IDENTITY (1,1),
+
+	[BMoney]  INT 
+)
+
+BEGIN TRANSACTION
+BEGIN TRY
+	  UPDATE TRegister SET Balance = Balance + 150 WHERE Id = 1
+      UPDATE TRegister SET Balance = Balance - 150 WHERE Id = 6
+	  COMMIT TRANSACTION
+END TRY
+BEGIN CATCH
+		IF   @@TRANCOUNT >0
+				ROLLBACK;
+				THROW;
+END CATCH

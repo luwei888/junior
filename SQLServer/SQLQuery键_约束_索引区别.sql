@@ -10,7 +10,7 @@
 
 --CREATE TABLE TMessage 
 --(
---  [Id] INT ,
+--  [Id] INT Not Null ,
 --  [FromUser] INT ,
 --  [ToUser] INT,
 --  [UrgentLevel] INT,
@@ -30,7 +30,6 @@ WHERE [name] = 'UCON_Kind'
 
 
  --证明“主键上可以是非聚集索引”
-
  ALTER TABLE TMessage 
 ALTER COLUMN Id INT Not Null
 
@@ -45,7 +44,6 @@ WHERE [name] = 'PK_Message_Id'
 
 
 --    证明“SQL Server不会为外键自动添加索引
-
 ALTER TABLE TMessage
 ADD CONSTRAINT FK_Message_FromUser FOREIGN KEY  (FromUser)  REFERENCES  TMessage(Id)
 
