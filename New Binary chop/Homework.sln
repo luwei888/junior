@@ -41,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quick-Sort", "Quick-Sort\Qu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLServer", "..\SQLServer\SQLServer.csproj", "{66FCF71B-2D49-4501-9705-304A3B1CEB9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Java Script Learn", "..\Java Script Learn\Java Script Learn.csproj", "{DDEC3F46-8FC8-4646-8778-5F51CCDB3F13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptLearn", "..\Java Script Learn\JavaScriptLearn.csproj", "{DDEC3F46-8FC8-4646-8778-5F51CCDB3F13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

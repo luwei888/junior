@@ -23,6 +23,8 @@ CREATE TABLE TResponse
 	[Create Time] DATETIME
 )
 
+
+
 INSERT TResponse (Content,AuthorId,ProblemId,[Create Time])
 VALUES (N'牛批',16,6,2019-6-5)
 
