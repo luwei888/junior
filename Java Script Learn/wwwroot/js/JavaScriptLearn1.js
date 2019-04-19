@@ -94,3 +94,4 @@ for (var i = 0; i < array.length; i++) {
 }
 
 //9.编写一个计算源栈返还红包金额的函数 redbag() ，参考：
+
