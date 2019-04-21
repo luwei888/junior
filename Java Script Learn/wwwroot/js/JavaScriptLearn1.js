@@ -54,34 +54,36 @@ for (var i = 0; i < radarray.length; i++) {
 
 //6.建立一个数组，里面混杂有整数、小数、正数、负数、字符串、布尔值等，
 //找出数组里面最大的数（忽略其他类型）
-var chaosarray = [3.4, 7.4, 10, -15, -36, 'adf', 'fje', 'fjo', true, true, false, true, false];
-var max = 0;
-for (var i = 0; i < chaosarray.length; i++) {
-    if (typeof (chaosarray[i]) === "number") {
-        if (max < chaosarray[i]) {
-            max = chaosarray[i];
-        }
+getMaxNumber([3.4, 7.4, 10, -15, -36, 'adf', 'fje', 'fjo', true, true, false, true, false]);
+function getMaxNumber(array) {
+    var chaosarray = array;
+    var max = 0;
+    for (var i = 0; i < chaosarray.length; i++) {
+        if (typeof (chaosarray[i]) === "number") {
+            if (max < chaosarray[i]) {
+                max = chaosarray[i];
+            }
+        } else;
     }
-    else;
+    return max;
 }
 
 //7.如果一个数只能被1和它自己整除，这个数就被称之为“素数”。请找出100以内的所有素数。
 //(1)路炜方法
 function findPrime(max) {
     var primarynumber = [];
-    var judge = false;
     for (var i = 2; i <= max; i++) {
+        var judge = true;
         for (var j = 2; j < i; j++) {
             if (i % j === 0) {
-                judge = true;
-            }
-            else;
+                judge = false;
+                break;
+            } else;
         }
-        if (judge === false) {
+        if (judge === true) {
             primarynumber.push(i)
             index++;
         }
-        judge = false;
     }
     return primarynumber;
 }
