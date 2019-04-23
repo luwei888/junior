@@ -40,7 +40,7 @@ array.unshift('小余老师');
 array[array.length] = '大飞哥';
 
 //5.创建一个随机整数数组：长度不大于10，元素不大于100，然后找出其中的最大数
-var radarray = new Array;
+var radarray =[];
 for (var i = 0; i < 9; i++) {
     radarray[i] = math.floor(math.random() * (100 - 0)) + 0;
 }
@@ -54,14 +54,13 @@ for (var i = 0; i < radarray.length; i++) {
 
 //6.建立一个数组，里面混杂有整数、小数、正数、负数、字符串、布尔值等，
 //找出数组里面最大的数（忽略其他类型）
-getMaxNumber([3.4, 7.4, 10, -15, -36, 'adf', 'fje', 'fjo', true, true, false, true, false]);
-function getMaxNumber(array) {
-    var chaosarray = array;
+getMaxNumber(3.4, 7.4, 10, -15, -36, 'adf', 'fje', 'fjo', true, true, false, true, false, NaN);
+function getMaxNumber() {
     var max = 0;
-    for (var i = 0; i < chaosarray.length; i++) {
-        if (typeof (chaosarray[i]) === "number") {
-            if (max < chaosarray[i]) {
-                max = chaosarray[i];
+    for (var i = 0; i < arguments.length; i++) {
+        if (typeof (arguments[i]) === "number" & arguments[i] != NaN) {
+            if (max < arguments[i]) {
+                max = arguments[i];
             }
         } else;
     }
@@ -81,8 +80,7 @@ function findPrime(max) {
             } else;
         }
         if (judge === true) {
-            primarynumber.push(i)
-            index++;
+            primarynumber.push(i);
         }
     }
     return primarynumber;
@@ -107,7 +105,7 @@ function isPrime(number) {
     }
     return true;
 }
-
+findPrime(200);
 
 //8.删除一个数组里面重复的元素
 var array = [8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙'];
@@ -149,6 +147,7 @@ function redBag(discount, studentNumber) {
 var str = "‘源栈’：飞哥小班教学，线下免费收看 "
 str = str.replace(/小/, '"小"');
 str = str.replace(/飞哥/, "大神");
+console.log(str);
 
 
 //11.将数组['why', 'gIT', 'vs2019', 'community', 'VERSION']规范化，所有字符串：
@@ -181,5 +180,3 @@ for (var i = 0; i < arr.length; i++) {
     } else;
     arr[i] = str;
 }
-
-

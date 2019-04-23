@@ -19,11 +19,11 @@ namespace Asp.NetCoreMVC.Controllers
             //Request.Headers[""] 获取 header
 
             //获取，移除，设置
-            HttpContext.Session.SetString("name", "feige");
-            HttpContext.Session.SetInt32("age", 24);
-            HttpContext.Session.GetString("name");
-            HttpContext.Session.Remove("name");
-            int? age = HttpContext.Session.GetInt32("age");
+            //HttpContext.Session.SetString("name", "feige");
+            //HttpContext.Session.SetInt32("age", 24);
+            //HttpContext.Session.GetString("name");
+            //HttpContext.Session.Remove("name");
+            //int? age = HttpContext.Session.GetInt32("age");
             return Content("hello" + value);
         }
     }
