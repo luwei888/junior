@@ -26,5 +26,10 @@ namespace Asp.NetCoreMVC.Controllers
             //int? age = HttpContext.Session.GetInt32("age");
             return Content("hello" + value);
         }
+
+        public IActionResult Sayhello1(string name)
+        {
+            return Content("name " + name);
+        }
     }
 }
