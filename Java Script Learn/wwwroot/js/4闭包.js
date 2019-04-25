@@ -79,8 +79,6 @@ function buildList(list) {
     return result;
 }
 
-
-
 //1.	函数自执行
 (function () {
     //2.	执行buildList的函数，list为[1, 2, 3]
