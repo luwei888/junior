@@ -35,6 +35,7 @@ function findWordNumber(string) {
     for (var i = 1; i < string.length; i++) {
         var temp1 = string[i].charCodeAt();
         var temp2 = string[i - 1].charCodeAt();
+        //当不是英文单词的符号前面为英文单词，英文单词数量加1；
         if (!isWord(temp1)) {
             if (isWord(temp2)) {
                 number++;

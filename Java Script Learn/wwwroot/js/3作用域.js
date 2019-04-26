@@ -6,70 +6,35 @@
 var yz = {};
 yz.fei = {};
 yz.fei.get986 = {};
-yz.fei.get986.has9 = function () {
-    var num9 = 0;
-    for (let i = 1; i < number; i++) {
-        if (ishas9(i)) {
-            num9++;
-        }
-    }
-    console.log(num9);
-
-    function ishas9(n) {
-        var str = String(n);
-        for (let i = 0; i < str.length; i++) {
-            if (str[i] == 9) {
+yz.fei.get986 = function (number) {
+    var num = 0;
+    for (var i = 1; i < number; i++) {
+        var str = i.toString();
+        var is9 = (function has9() {
+            if (str.indexOf("9") != -1) {
                 return true;
             }
-        }
-        return false;
-    }
-}
-
-
-yz.fei.get986.has8 = function () {
-    var num8 = 0;
-    for (let i = 1; i < number; i++) {
-        if (ishas8(i)) {
-            num8++;
-        }
-    }
-    console.log(num8);
-
-    function ishas8(n) {
-        var str = String(n);
-        for (let i = 0; i < str.length; i++) {
-            if (str[i] == 8) {
+            else { return false };
+        })();
+        var is8 = (function has8() {
+            if (str.indexOf("8") != -1) {
                 return true;
             }
-        }
-        return false;
-    }
-}
-
-
-yz.fei.get986.has6 = function () {
-    var num6 = 0;
-    for (let i = 1; i < number; i++) {
-        if (ishas6(i)) {
-            num6++;
-        }
-    }
-    console.log(num6);
-
-    function ishas6(n) {
-        var str = String(n);
-        for (let i = 0; i < str.length; i++) {
-            if (str[i] == 6) {
+            else return false;
+        })();
+        var is6 = (function has6() {
+            if (str.indexOf("6") != -1) {
                 return true;
             }
+            else return false;
+        })();
+
+        if (is9 | is8 | is6) {
+            num++;
         }
-        return false;
     }
+    return num;
 }
 
-
-var number = 100;
-yz.fei.get986.has9();
-yz.fei.get986.has8();
-yz.fei.get986.has6();
+var number = 10000;
+yz.fei.get986(number);
