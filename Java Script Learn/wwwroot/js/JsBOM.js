@@ -12,17 +12,18 @@
 //用了10次都还没猜对，弹出：^ (*￣(oo) ￣)^
 
 //Q1
-function showNum() {
-    var n = 0;
-    function show() {
-        n++;
-        var ran = Math.floor(Math.random() * 50);
-        alert(`第${n}周` + `源栈同学${ran}人`)
-    }
-    setInterval(show, 1000);
-}
+//function showNum() {
+//    var n = 0;
+//    function show() {
+//        n++;
+//        var ran = Math.floor(Math.random() * 50);
+//        alert(`第${n}周` + `源栈同学${ran}人`)
+//        setInterval(show, 1000);
+//    }
+//    setInterval(show, 1000);
+//}
 
-showNum();
+//showNum();
 
 
 //Q2
@@ -52,6 +53,7 @@ function guess() {
         }
         else {
             output(guessTime);
+            break;
         }
     }
 }

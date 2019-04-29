@@ -1,0 +1,37 @@
+﻿@page
+@model _17bang.Pages.testModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>test</title>
+</head>
+<body>
+    <h2>万紫千红</h2>
+    <button style="color:red" name="change-color">变红</button>
+    <button style="color:blue" name="change-color">变蓝</button>
+    <button style="color:yellow" name="change-color">变黄</button>
+    <script>
+        function changeColor(color) {
+            document.getElementsByTagName('h2')[0].style.color = color;
+        }
+
+        //document.getElementsByTagName('button')[0].onclick = function () {
+        //    changeColor('red');
+        //}
+
+        var btns = document.getElementsByTagName('button');
+        for (let i = 0; i < btns.length; i++) {
+            var btn = btns[i];
+            btn.onclick = function () { changeColor(this.style.color) };
+        }
+
+    </script>
+
+</body>
+</html>
