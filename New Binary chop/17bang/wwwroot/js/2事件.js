@@ -1,4 +1,5 @@
 ﻿
+//Q1
 function findtime() {
     var javaTime = document.getElementsByName('java').length;
     var CrawlerTime = document.getElementsByName('Crawler').length;
@@ -16,8 +17,5 @@ function findtime() {
 
 findtime();
 
-//var btns = document.getElementsByTagName('button');
-//for (let i = 0; i < btns.length; i++) {
-//    var btn = btns[i];
-//    btn.onclick = function () { changeColor(this.style.color) };
-//}
+
+//Q2 scroll - event

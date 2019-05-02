@@ -10,28 +10,65 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>test</title>
+    <style>
+        #propagate {
+            padding: 30px;
+            border: 1px solid;
+        }
+
+            #propagate > ol {
+                background-color: blue;
+            }
+
+                #propagate > ol > li {
+                    border: 1px dashed;
+                }
+    </style>
 </head>
 <body>
-    <h2>万紫千红</h2>
-    <button style="color:red" name="change-color">变红</button>
-    <button style="color:blue" name="change-color">变蓝</button>
-    <button style="color:yellow" name="change-color">变黄</button>
+    @*<h2>万紫千红</h2>
+        <button style="color:red" name="change-color">变红</button>
+        <button style="color:blue" name="change-color">变蓝</button>
+        <button style="color:yellow" name="change-color">变黄</button>
+        <script>
+            function changeColor(color) {
+                document.getElementsByTagName('h2')[0].style.color = color;
+            }
+
+            //document.getElementsByTagName('button')[0].onclick = function () {
+            //    changeColor('red');
+            //}
+
+            var btns = document.getElementsByTagName('button');
+            for (let i = 0; i < btns.length; i++) {
+                var btn = btns[i];
+                btn.onclick = function () { changeColor(this.style.color) };
+            }
+
+        </script>*@
+    <div id="propagate">
+        <ol style="padding:30px;">
+            <li>深藏功与名</li>
+        </ol>
+    </div>
     <script>
-        function changeColor(color) {
-            document.getElementsByTagName('h2')[0].style.color = color;
-        }
+        var father = document.getElementById('propagate'),
+            child = father.children[0];
+        father.addEventListener('click', function (event) {
+            //event.stopPropagation();
+            console.log('event.target of father:' + event.target.innerHTML);
+            console.log('event.currentTarget of father:' + event.currentTarget.innerHTML);
+            //console.log('this=event.currentTargetin father?   ' + (this === event.currentTarget))
+        }, true);
 
-        //document.getElementsByTagName('button')[0].onclick = function () {
-        //    changeColor('red');
-        //}
+        child.addEventListener('click', function () {
+            //event.stopPropagation();
+            console.log('event.target of child:' + event.target.innerHTML);
+            console.log('event.currentTarget of child:' + event.currentTarget.innerHTML);
+            //console.log('this=event.currentTarget in child?   ' + (this === event.currentTarget))
 
-        var btns = document.getElementsByTagName('button');
-        for (let i = 0; i < btns.length; i++) {
-            var btn = btns[i];
-            btn.onclick = function () { changeColor(this.style.color) };
-        }
+        }/*, false*/);
 
     </script>
-
 </body>
 </html>
