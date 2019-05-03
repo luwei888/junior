@@ -6,11 +6,10 @@
 //2.JSON生成和解析
 //按自己的情况，生成一个JSON字符串，包括真实姓名、QQ昵称、年龄、性别、兴趣爱好、自我介绍……，上传到QQ群：一起帮·有意向（729600626）
 //根据其他同学的JSON获得其个人资料，生成一个表格显示
-//利用新学到的Array函数，重新完成之前的数组相关作业
+//3.利用新学到的Array函数，重新完成之前的数组相关作业
 
 //function isEmail(email) {
-//    var re = /^[\w.]+@\w+\.[a-z]+$/i;
-
+    //var re = /^[\w.]+@\w+\.[a-z]+$/i;
 //    if (re.test(email)) {
 //        console.log(`${email}是合法的邮箱`);
 //    } else {
@@ -24,27 +23,110 @@
 //isEmail("Luwei--@outlook.com");
 //isEmail("@2073414181@qq.com");
 //isEmail("1573626[][]@163.com");
+//isEmail("121e3ee.@!qq.2e2");
+//isEmail("121e3ee.@!qq.2e2#");
+//isEmail("121e3eeqq.2e2");
+//isEmail("%121e3ee.@!qq.2e2");
+//isEmail("121e3ee.@qq2e2");
+//isEmail("     121e3ee.@qq2e2");
+//isEmail("w21e3ee.@qq2.e2");
 
 
-function isDecimal(number) {
-    var re = /^-?[\d0]+\.[\d]+[1-9]+$/;
-    if (re.test(number)) {
-        console.log(`${number}是小数`);
-    } else {
-        console.log(`${number}不是小数`);
-    }
+//function isDecimal(number) {
+//    var re = /^-?[\d0]+\.[\d]+[1-9]+$/;
+//    if (re.test(number)) {
+//        console.log(`${number}是小数`);
+//    } else {
+//        console.log(`${number}不是小数`);
+//    }
+//}
+
+//isDecimal("1.65311");
+//isDecimal("0.548");
+//isDecimal("-20.5622");
+//isDecimal("20.3.55");
+//isDecimal("0.236jd");
+//isDecimal(".235");
+//isDecimal("ajs12.52300");
+//isDecimal("020.3");
+
+
+
+//将所有以zyf- 开头的属性去掉zyf-
+
+function deleteStr(value){
+    var re = /[href.|style.]zyf-]/;
+    value = value.replace();
 }
 
-isDecimal("1.65311");
-isDecimal("0.548");
-isDecimal("-20.5622");
-isDecimal("20.3.55");
-isDecimal("0.236jd");
-isDecimal(".235");
-isDecimal("ajs12.52300");
-isDecimal("020.3");
+deleteStr(<a lzyf-old=''>)
 
 
 
 
 
+//var LaoCheng = {
+//    name: '老程',
+//    age: 21,
+//    isFemale: true,
+//    hobby: ['tabletennis', 'basketball', 'swim'],
+//    course: {
+//        'C#': 86,
+//        'HTML/CSS/JavaScript': 95,
+//        SQL: 92,
+//        'ASP.NET': null
+//    }
+//}
+//console.log(JSON.stringify(LaoCheng));
+//console.log(JSON.stringify(LaoCheng, ['age']));
+//console.log(JSON.stringify(LaoCheng, null, '   '));
+//console.log(JSON.stringify(LaoCheng, function (key, value) {
+//    if (typeof value === 'string') {
+//        return value.toUpperCase();
+//    }
+//    return value;
+//}));
+
+
+//2.JSON生成和解析
+//按自己的情况，生成一个JSON字符串，包括真实姓名、QQ昵称、年龄、性别、兴趣爱好、自我介绍……，上传到QQ群：一起帮·有意向（729600626）
+//根据其他同学的JSON获得其个人资料，生成一个表格显示
+
+//var luwei = {
+//    sketch: {
+//        name: "金路炜",
+//        nickna: "路炜",
+//        age: 24,
+//        gender: "gentleman",
+//    },
+//    hobby: ["learning", "I love learning", "Learning makes me happy"],
+//    introduction: "一粒金丹吞入腹，始知我命不由天"
+//}
+
+//console.log(JSON.stringify(luwei));
+
+//var LaoCheng = JSON.parse('{ "name": "小龙", "nickname": "江流儿", "age": 3, "isFamel": true, "hobby": ["eat", "drink", "goWhoring", "gamble"], "indroduce": "神一样男人" }')
+//var LaoCheng = JSON.parse('{"name":"小程","QQname":"老程","age":41,"gender":"女","hobby":"blackmail,cheat,thief","introduction":"Never Mind the Scandal and Liber"}')
+
+
+
+//1.删除一个数组里面重复的元素
+//2.建立一个数组，里面混杂有整数、小数、正数、负数、字符串、布尔值等，
+//找出数组里面最大的数（忽略其他类型）
+var s = new Set([8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙']);
+
+var arr = [8, '14', 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙'];
+
+var arr1 = arr.sort(function (a, b) {
+    if (typeof a !== "string" || typeof b !== "string") {
+        if (a < b) {
+            return 1;
+        } else if (a > b) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+});
+console.log(arr1);
+console.log(arr1[0]);
