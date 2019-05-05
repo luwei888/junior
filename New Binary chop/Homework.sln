@@ -43,7 +43,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLServer", "..\SQLServer\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JavaScriptLearn", "..\Java Script Learn\JavaScriptLearn.csproj", "{DDEC3F46-8FC8-4646-8778-5F51CCDB3F13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asp.NetCoreMVC", "..\Asp.NetCoreMVC\Asp.NetCoreMVC.csproj", "{A7CA0683-636A-4D56-BD8A-5978233EDC92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asp.NetCoreMVC", "..\Asp.NetCoreMVC\Asp.NetCoreMVC.csproj", "{A7CA0683-636A-4D56-BD8A-5978233EDC92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,7 +9,7 @@
 //3.利用新学到的Array函数，重新完成之前的数组相关作业
 
 //function isEmail(email) {
-    //var re = /^[\w.]+@\w+\.[a-z]+$/i;
+//var re = /^[\w.]+@\w+\.[a-z]+$/i;
 //    if (re.test(email)) {
 //        console.log(`${email}是合法的邮箱`);
 //    } else {
@@ -54,12 +54,16 @@
 
 //将所有以zyf- 开头的属性去掉zyf-
 
-function deleteStr(value){
-    var re = /[href.|style.]zyf-]/;
-    value = value.replace();
+function deleteStr(str) {
+    var rePart = /p/ig;
+    var values = str.match(rePart);
+    console.log(values);
+    //value = value.replace(re, '"');
+    //console.log(value);
 }
 
-deleteStr(<a lzyf-old=''>)
+deleteStr('<a zyf-href="zyf-s">zyf-lu</a> <p></p>');
+deleteStr('<p class="zyf-skj"> </p>')
 
 
 
@@ -113,20 +117,21 @@ deleteStr(<a lzyf-old=''>)
 //1.删除一个数组里面重复的元素
 //2.建立一个数组，里面混杂有整数、小数、正数、负数、字符串、布尔值等，
 //找出数组里面最大的数（忽略其他类型）
-var s = new Set([8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙']);
+//var s = new Set([8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙']);
 
-var arr = [8, '14', 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙'];
 
-var arr1 = arr.sort(function (a, b) {
-    if (typeof a !== "string" || typeof b !== "string") {
-        if (a < b) {
-            return 1;
-        } else if (a > b) {
-            return -1;
-        } else {
-            return 0;
-        }
-    }
-});
-console.log(arr1);
-console.log(arr1[0]);
+//var arr = [8, '14', 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙'];
+
+//var arr1 = arr.sort(function (a, b) {
+//    if (typeof a !== "string" || typeof b !== "string") {
+//        if (a < b) {
+//            return 1;
+//        } else if (a > b) {
+//            return -1;
+//        } else {
+//            return 0;
+//        }
+//    }
+//});
+//console.log(arr1);
+//console.log(arr1[0]);
