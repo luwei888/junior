@@ -8,6 +8,16 @@
 //根据其他同学的JSON获得其个人资料，生成一个表格显示
 //3.利用新学到的Array函数，重新完成之前的数组相关作业
 
+//2073414181@qq.com   true
+//Luwei.jin@outlook.com   true
+//15736262776@163.com   true
+
+//Luwei--@outlook.com false
+//@2073414181@qq.com false
+//1573626[][]@163.com false
+
+
+
 //function isEmail(email) {
 //var re = /^[\w.]+@\w+\.[a-z]+$/i;
 //    if (re.test(email)) {
@@ -17,10 +27,10 @@
 //    }
 //}
 
-//isEmail("2073414181@qq.com");
-//isEmail("luwei.jin@outlook.com");
-//isEmail("15736262776@163.com");
-//isEmail("Luwei--@outlook.com");
+//isEmail("2073414181@qq.com");  
+//isEmail("luwei.jin@outlook.com");  
+//isEmail("15736262776@163.com");   
+//isEmail("Luwei--@outlook.com");  
 //isEmail("@2073414181@qq.com");
 //isEmail("1573626[][]@163.com");
 //isEmail("121e3ee.@!qq.2e2");
@@ -32,8 +42,20 @@
 //isEmail("w21e3ee.@qq2.e2");
 
 
+
+//是否是小数（正负小数都可以）
+//1.65311 true
+//0.548 true
+//    - 20.5622 true
+
+//20.3.55 false
+//0.236jd false
+//.235 false
+//ajs12.52300 false
+//020.3 false
+
 //function isDecimal(number) {
-//    var re = /^-?[\d0]+\.[\d]+[1-9]+$/;
+//    var re = /^[+-]?[\d0]+\.[\d]+[1-9]+$/;
 //    if (re.test(number)) {
 //        console.log(`${number}是小数`);
 //    } else {
@@ -55,16 +77,23 @@
 //将所有以zyf- 开头的属性去掉zyf-
 
 function deleteStr(str) {
-    var rePart = /p/ig;
-    var values = str.match(rePart);
-    console.log(values);
-    //value = value.replace(re, '"');
-    //console.log(value);
+    var regOfTag = /<[^/|.]+\/.>/ig;
+    var tags = str.match(regOfTag);
+    console.log(tags);
+    var regOfProperty = /\s(zyf\-)[\S]*?=/g;
+    var result = [];
+    for (var i = 0; i < tags.length; i++) {
+        result.push(tags[i].replace(regOfProperty, function (match, content) {
+            console.log(match);
+            console.log(content);
+            return match.replace(content, "");
+        }))
+    }
+    console.log(result);
 }
 
 deleteStr('<a zyf-href="zyf-s">zyf-lu</a> <p></p>');
-deleteStr('<p class="zyf-skj"> </p>')
-
+deleteStr('<p zyf-class="zyf-skj"> </p>')
 
 
 
