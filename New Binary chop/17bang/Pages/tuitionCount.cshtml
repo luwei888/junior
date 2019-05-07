@@ -10,8 +10,16 @@
 
 <main class="indent">
     <p>学费计算器</p>
-        <div style="margin:10px,20px,10px,20px">入栈时间：<input type="date" id="startTime" /></div><br />
-        <div style="margin:10px,20px,10px,20px">出栈时间：<input type="date" id="endTime" /></div><br />
-        <input type="button" id="btn" value="提交"/>
+    <div style="margin:10px,20px,10px,20px">入栈时间：<input type="date" id="startTime" /></div><br />
+    <div style="margin:10px,20px,10px,20px">
+        学习时间:
+        <input type="text" id="learnTime" />
+        <select style="margin:20px,20px,20px,20px" id="unit">
+            <option value="日">日</option>
+            <option value="周">周</option>
+            <option value="月">月</option>
+        </select>
+    </div><br />
+    <input type="button" id="btn" value="提交" />
     <script src="~/js/学费计算器.js" type="text/javascript"></script>
 </main>
