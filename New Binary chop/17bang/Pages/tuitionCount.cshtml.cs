@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _17bang.Pages
 {
-    public class IndexModel : PageModel
+    public class tuitionCountModel : PageModel
     {
         public void OnGet()
         {

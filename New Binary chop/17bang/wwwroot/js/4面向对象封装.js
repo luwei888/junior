@@ -65,3 +65,49 @@ Course.prototype.begin = function () {
 
 //JavaScript.begin();
 SQL.begin();
+
+
+//6.在Course中使用getter和setter包装endDate，保证endDate不会小于startDate，也不会比startDate多出365天 
+//见JS学费计算器及tuitionCount页面
+
+
+//7.判断并证明以下说法：
+
+//ES里的class其实就是一个function
+//class student {
+//    hello() {
+//        console.log("大家好")
+//    }
+//}
+//typeof student; true
+
+//constructor总是返回class的实例
+//var luwei = new student();
+//luwei.constructor;
+
+//当new了一个class之后，class里声明的方法就会被copy到新生成的实例对象上
+//luwei.hasOwnProperty("hello") false
+
+//JavaScript里面，类就是对象，对象也是类
+
+
+//只有Function才有prototype
+
+
+//Javascript是动态类型语言，所以对象的类型是可以随意更改的
+//class student {
+//    hello() {
+//        console.log("666");
+//    }
+//}
+
+//class gentlemen {
+//    hello() {
+//        console.log("888")
+//    }
+//}
+
+//var luwei = new student();
+//luwei.hello();
+//luwei = new gentlemen;
+//luwei.hello();    true
