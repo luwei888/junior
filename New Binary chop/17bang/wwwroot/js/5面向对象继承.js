@@ -11,100 +11,82 @@
 
 
 //1.最封装作业的基础上，为Course添加两个子类：主修课（MajorCourse）和辅修课（ElectiveCourse）
-//class Course {
-//    constructor(name, startDate, endDate/* studentName, studentScore*/) {
-//        this.name = name;
-//        this.startDate = startDate;
-//        this.endDate = endDate;
-//        //this.studentName = studentName;
-//        //this.studentScore = studentScore;
-//        this.students = new Student("luwei", 88);
-//    }
-//    begin() {
-//        console.log(this.name + "开始时间为：" + this.startDate);
-//        console.log(`${this.students.name}同学，成绩为${this.students.score}`);
-//    }
-//    end() {
-//        this.students.score = Math.floor(Math.random() * (100 - 50 + 1) + 50);
-//        //console.log(this.name + "结束时间为：" + this.endDate);
-//    }
-//}
+class Course {
+    constructor(name, type, startDate, endDate) {
+        this.name = name;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.type = type;
+    }
+    begin() {
+        console.log(this.name + "开始时间为：" + this.startDate);
+        console.log(`${this.students.name}同学，成绩为${this.students.score}`);
+    }
+    end(student) {
+        this.student = student;
+        if (this.type === "MajorCourse") {
+            this.student.score = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+        } else {
+            this.student.score = randomScore();
+        }
+        //console.log(this.name + "结束时间为：" + this.endDate);
+    }
+}
+
 
 //3.主修课需要参加考试，所以有一个Exam(student)方法；辅修课只需要测评，所以有一个方法Assess(student)
-//class MajorCourse extends Course {
-//    constructor(students) {
-//        super(students);
-//    }
-//    Exam() {
-//        super.end();
-//        console.log(`${this.students.name}同学，成绩为${this.students.score}`);
-//    }
-//}
-
-
-
-
+class MajorCourse extends Course {
+    constructor(name, type, startDate, endDate) {
+        super(name, type, startDate, endDate);
+    }
+    Exam(student) {
+        super.end(student);
+        console.log(`${this.student.name}同学，${this.name}成绩为${this.student.score}`);
+    }
+}
 
 
 
 //2.声明一个Student类，包含name和score两个属性，让Course的Students包含的是Student的对象
-//class Student {
-//    constructor(name, score) {
-//        this.name = name;
-//        this.score = score;
-//    }
-//}
-
-//var JavaScript = new Course("JS", "2019-4-20", "2019-5-15");
-//var SQL = new Course("SQL", "2019-3-20", "2019-4-15");
-
-//4.声明一个MajorCourse的实例，运行它的Exam(student)方法，结束课程（使用end()方法），
-//并给该student的score赋值为50 - 100的随机整数
-//var advancedMath = new MajorCourse;
-//advancedMath.Exam();
+class Student {
+    constructor(name, score) {
+        this.name = name;
+        this.score = score;
+    }
+}
 
 
-//5.声明一个ElectiveCourse的实例，运行它的Exam(student)方法，结束课程
-//（使用end()方法），给该student的score赋值为ABCDE中的一个随机值
-//class Course {
-//    constructor(name, startDate, endDate/* studentName, studentScore*/) {
-//        this.name = name;
-//        this.startDate = startDate;
-//        this.endDate = endDate;
-//        //this.studentName = studentName;
-//        //this.studentScore = studentScore;
-//        this.students = new Student("luwei", 88);
-//    }
-//    begin() {
-//        console.log(this.name + "开始时间为：" + this.startDate);
-//        console.log(`${this.students.name}同学，成绩为${this.students.score}`);
-//    }
-//    end() {
-//        this.students.score = randomScore();
-//        //console.log(this.name + "结束时间为：" + this.endDate);
-//    }
-//}
 
-//class ElectiveCourse extends Course {
-//    constructor(students) {
-//        super(students)
-//    }
-//    Assess() {
-//        super.end();
-//        console.log(`${this.students.name}同学，成绩为${this.students.score}`);
-//    }
-//}
+//4.创建一个MajorCourse的实例，运行它的Exam(student)方法，结束课程（使用end()方法），
+//并给该student该course上的score赋值为50 - 100的随机整数 
+var luwei = new Student("luwei", 88);
+var advancedMath = new MajorCourse("advancedMath", "MajorCourse", "2019-5-1", "2019-10-5");
+advancedMath.Exam(luwei);
 
 
-//function randomScore() {
-//    var temp = ["A", "B", "C", "D", "E",];
-//    var index = Math.floor(Math.random() * 5);
-//    var score = temp[index];
-//    return score;
-//}
+//5.创建一个ElectiveCourse的实例，运行它的Exam(student)方法，结束课程（使用end()方法），
+//给该student该course上的score赋值为ABCDE中的一个随机值 
 
-//var popMusic = new ElectiveCourse;
-//popMusic.Assess();
+class ElectiveCourse extends Course {
+    constructor(students) {
+        super(students)
+    }
+    Assess(student) {
+        super.end(student);
+        console.log(`${this.student.name}同学，${this.name}成绩为${this.student.score}`);
+    }
+}
+
+
+function randomScore() {
+    var temp = ["A", "B", "C", "D", "E",];
+    var index = Math.floor(Math.random() * 5);
+    var score = temp[index];
+    return score;
+}
+
+var popMusic = new ElectiveCourse("popMusic","ElectiveCourse","2019-6-8","2019-12-5");
+popMusic.Assess(luwei);
 
 
 
@@ -168,31 +150,31 @@
 
 //8.说明：为什么子类可以继承父类的实例和静态方法？
 //(1).静态方法都可以使用，并不需要继承
-//(2).JS子类的
+//(2).JavaScript中的子类对象是在父类对象基础上生成的
 
-// 定义一个动物类
-function Animal(name) {
-    // 属性
-    this.name = name || 'Animal';
-    // 实例方法
-    this.sleep = function () {
-        console.log(this.name + '正在睡觉！');
-    }
-}
-// 原型方法
-Animal.prototype.eat = function (food) {
-    console.log(this.name + '正在吃：' + food);
-};
+//// 定义一个动物类
+//function Animal(name) {
+//    // 属性
+//    this.name = name || 'Animal';
+//    // 实例方法
+//    this.sleep = function () {
+//        console.log(this.name + '正在睡觉！');
+//    }
+//}
+//// 原型方法
+//Animal.prototype.eat = function (food) {
+//    console.log(this.name + '正在吃：' + food);
+//};
 
-function Cat() {
-}
-Cat.prototype = new Animal();
-Cat.prototype.name = 'cat';
+//function Cat() {
+//}
+//Cat.prototype = new Animal();
+//Cat.prototype.name = 'cat';
 
-//　Test Code
-var cat = new Cat();
-console.log(cat.name);
-console.log(cat.eat('fish'));
-console.log(cat.sleep());
-console.log(cat instanceof Animal); //true 
-console.log(cat instanceof Cat); //true
+////　Test Code
+//var cat = new Cat();
+//console.log(cat.name);
+//console.log(cat.eat('fish'));
+//console.log(cat.sleep());
+//console.log(cat instanceof Animal); //true 
+//console.log(cat instanceof Cat); //true

@@ -74,16 +74,16 @@ SQL.begin();
 //7.判断并证明以下说法：
 
 //ES里的class其实就是一个function
-//class student {
-//    hello() {
-//        console.log("大家好")
-//    }
-//}
+class student {
+    hello() {
+        console.log("大家好")
+    }
+}
 //typeof student; true
 
 //constructor总是返回class的实例
-//var luwei = new student();
-//luwei.constructor;
+var luwei = new student();
+luwei.constructor;
 
 //当new了一个class之后，class里声明的方法就会被copy到新生成的实例对象上
 //luwei.hasOwnProperty("hello") false
@@ -92,7 +92,7 @@ SQL.begin();
 
 
 //只有Function才有prototype
-
+Object.hasOwnProperty("prototype")
 
 //Javascript是动态类型语言，所以对象的类型是可以随意更改的
 //class student {
@@ -103,7 +103,7 @@ SQL.begin();
 
 //class gentlemen {
 //    hello() {
-//        console.log("888")
+//        console.log("888");
 //    }
 //}
 
