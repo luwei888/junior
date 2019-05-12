@@ -10,9 +10,9 @@ import * as user from "./user.js";
 
 export class score {
     constructor(playerName, score) {
-        var dateTime = new Date;
-        var playerName = "";
-        var score = "";
+        this.dateTime = new Date;
+        this.playerName;
+        this.score;
     }
     static getBest(playName) {
         this.playerName = user.getNameById(playName);

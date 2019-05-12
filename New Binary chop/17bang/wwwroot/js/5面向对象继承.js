@@ -92,39 +92,46 @@ popMusic.Assess(luwei);
 
 //6.给Course声明一个静态的GetStudentsByName(name) ，
 //能根据不同的name返回不同的整数值（参加该course的学生数量）
-//class Course {
-//    constructor(name, startDate, endDate/* studentName, studentScore*/) {
-//        this.name = name;
-//        this.startDate = startDate;
-//        this.endDate = endDate;
-//        //this.studentName = studentName;
-//        //this.studentScore = studentScore;
-//        this.students = new Student("luwei", 88);
-//    }
-//    begin() {
-//        console.log(this.name + "开始时间为：" + this.startDate);
-//        console.log(`${this.students.name}同学，成绩为${this.students.score}`);
-//    }
-//    end() {
-//        this.students.score = randomScore();
-//        //console.log(this.name + "结束时间为：" + this.endDate);
-//    }
+class Course {
+    constructor(name, type, startDate, endDate) {
+        this.name = name;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.type = type;
+    }
 
-//    static GetStudentsByName(name) {
-//        var stuNumber = 0;
-//        if (name === "popMusic") {
-//            stuNumber = 100;
-//        } else if (name === "advancedMath") {
-//            stuNumber = 10;
-//        } else {
-//            stuNumber = 50;
-//        }
-//        console.log(`${name}课有${stuNumber}学生`);
-//        return stuNumber;
-//    }
-//}
+    begin() {
+        console.log(this.name + "开始时间为：" + this.startDate);
+        console.log(`${this.students.name}同学，成绩为${this.students.score}`);
+    }
 
-//Course.GetStudentsByName("popMusic");
+    end(student) {
+        this.student = student;
+        if (this.type === "MajorCourse") {
+            this.student.score = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+        } else {
+            this.student.score = randomScore();
+        }
+        //console.log(this.name + "结束时间为：" + this.endDate);
+    }
+
+    static GetStudentsByName(name) {
+        var stuNumber = 0;
+        if (name === "popMusic") {
+            stuNumber = 100;
+        } else if (name === "advancedMath") {
+            stuNumber = 10;
+        } else {
+            stuNumber = 50;
+        }
+        console.log(`${name}课有${stuNumber}学生`);
+        return stuNumber;
+    }
+
+}
+
+
+Course.GetStudentsByName("popMusic");
 
 
 
