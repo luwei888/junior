@@ -1,0 +1,118 @@
+﻿#main {
+    width: 1130px;
+    height: 1130px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blue;
+}
+
+#backgrand {
+    float: left;
+    width: 5120px;
+    height: 2430px;
+    background: url(../打地鼠/背景.jpg);
+    background-size: cover;
+    z-index: -10;
+}
+
+#area {
+    padding-top: 1500px;
+    padding-left: 1300px;
+    float: left;
+}
+
+#row1 {
+    margin-bottom: 500px;
+}
+
+    #row1 > div {
+        float: left;
+        padding-right: 80px;
+    }
+
+#row2 > div {
+    float: left;
+    padding-right: 80px;
+}
+
+#mound1 {
+    z-index: 3;
+    position: absolute;
+    left: 1204px;
+    top: 1500px;
+}
+
+#mound2 {
+    z-index: 3;
+    position: absolute;
+    left: 2110px;
+    top: 1500px;
+}
+
+#mound3 {
+    z-index: 3;
+    position: absolute;
+    left: 3016px;
+    top: 1500px;
+}
+
+#mound4 {
+    z-index: 3;
+    position: absolute;
+    left: 1204px;
+    top: 1950px;
+}
+
+#mound5 {
+    z-index: 3;
+    position: absolute;
+    left: 2110px;
+    top: 1950px;
+}
+
+#mound6 {
+    z-index: 3;
+    position: absolute;
+    left: 3016px;
+    top: 1950px;
+}
+
+#mole1 {
+    z-index: 2;
+}
+
+#mole2 {
+    z-index: 2;
+    position: absolute;
+    left: 2421px;
+    top: 1545px;
+}
+
+#mole3 {
+    z-index: 2;
+    position: absolute;
+    left: 3327px;
+    top: 1545px;
+}
+
+#mole4 {
+    z-index: 2;
+    position: absolute;
+    left: 1515px;
+    top: 1995px;
+}
+
+#mole5 {
+    z-index: 2;
+    position: absolute;
+    left: 2421px;
+    top: 1995px;
+}
+
+#mole6 {
+    z-index: 2;
+    position: absolute;
+    left: 3327px;
+    top: 1995px;
+}
