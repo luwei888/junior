@@ -18,7 +18,7 @@
 
 #area {
     padding-top: 1500px;
-    padding-left: 1300px;
+    padding-left: 1200px;
     float: left;
 }
 
@@ -85,34 +85,29 @@
 #mole2 {
     z-index: 2;
     position: absolute;
-    left: 2421px;
-    top: 1545px;
+    
 }
 
 #mole3 {
     z-index: 2;
     position: absolute;
-    left: 3327px;
-    top: 1545px;
+    
 }
 
 #mole4 {
     z-index: 2;
     position: absolute;
-    left: 1515px;
-    top: 1995px;
+    
 }
 
 #mole5 {
     z-index: 2;
     position: absolute;
-    left: 2421px;
-    top: 1995px;
+   
 }
 
 #mole6 {
     z-index: 2;
     position: absolute;
-    left: 3327px;
-    top: 1995px;
+  
 }
