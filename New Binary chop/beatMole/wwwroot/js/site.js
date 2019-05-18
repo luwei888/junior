@@ -130,18 +130,17 @@ function moleUp(id, result, moleType) {
     //绑定点击事件
     console.log("insertElement =" + insertElement);
     insertElement.onmousedown = six;
-    console.log("insertElement =" + insertElement.onmousedown);
 
     function six() {
         console.log(moleType);
         if (moleType === "mine") {
+            Mole.style = "width:400px;margin-left:200px;margin-top:-250px;";
             Mole.src = "./打地鼠/爆炸.png";
         } else if (moleType === "badMole") {
-            Mole.src = "./打地鼠/晕地鼠.png"
+            Mole.src = "./打地鼠/晕老鼠.png"
         } else {
             Mole.src = "";
         }
-        Mole.style = "margin-left:300px;margin-top:45px; "
     }
 
 
