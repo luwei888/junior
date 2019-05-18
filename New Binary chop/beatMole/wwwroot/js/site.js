@@ -24,10 +24,13 @@ function moveUp() {
 function gameGather() {
     //先寻找三个土堆出来
     var temp = randMound();
+
+    //再随机出来鼹鼠，坏鼹鼠，地雷，插入
     insertMole(temp[0]);
     insertMole(temp[1]);
     insertMole(temp[2]);
-    //再随机出来鼹鼠，坏鼹鼠，地雷
+    insertMole(temp[3]);
+
 
 }
 
@@ -37,7 +40,7 @@ function randMound() {
     let mound = [1, 2, 3, 4, 5, 6];
     let gain = [];
     let ranIndex = 0;
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 4; i++) {
         ranIndex = Math.floor(Math.random() * (6 - i));
         //将取得的土堆标号储存到数组
         gain.push(mound[ranIndex]);
@@ -73,27 +76,28 @@ class randMole {
 //插入鼹鼠
 function insertMole(value) {
     console.log(value);
+    //随机鼹鼠
     var mound1 = new randMole(value);
     console.log(mound1.id);
     console.log(mound1.value);
     console.log(mound1.result);
 
-    //将得到的三个属性传入
-    moleUp(value, mound1.result);
-
-
+    //将得到的三个属性传入 value ：图片的出现位置，图片的引用地址，图片的类型
+    moleUp(value, mound1.result, mound1.value);
 }
 
 
 //鼹鼠上升
-function moleUp(id,result) {
+function moleUp(id, result, moleType) {
 
-    var areaObj = document.getElementById(`area${id}`);
-    console.log(`area${id}`);
+    let moleId = id;
+
+    var areaObj = document.getElementById(`area${moleId}`);
+    console.log(`area${moleId}`);
     var moleObj = null;
 
     function init() {
-        moleObj = document.getElementById(`mole${id}`);
+        moleObj = document.getElementById(`mole${moleId}`);
         moveUp();
     }
 
@@ -109,26 +113,61 @@ function moleUp(id,result) {
 
 
     var Mole = document.createElement("img");
-    Mole.id = `mole${id}`;
-    
-    Mole.style = "margin-left:300px;margin-top:45px;"
+    Mole.id = `mole${moleId}`;
+    Mole.style = "margin-left:300px;margin-top:45px; ";
+
+
+
+
+    console.log(Mole.style);
     Mole.src = result;
 
     //插入鼹鼠
-    areaObj.insertBefore(Mole,areaObj.nextSiblings);
+    areaObj.insertBefore(Mole, areaObj.nextSiblings);
 
-    init();
+    console.log("Mole.id =" + Mole.id);
+    var insertElement = document.getElementById(`${Mole.id}`);
+    //绑定点击事件
+    console.log("insertElement =" + insertElement);
+    insertElement.onmousedown = six;
+    console.log("insertElement =" + insertElement.onmousedown);
+
+    function six() {
+        console.log(moleType);
+        if (moleType === "mine") {
+            Mole.src = "./打地鼠/爆炸.png";
+        } else if (moleType === "badMole") {
+            Mole.src = "./打地鼠/晕地鼠.png"
+        } else {
+            Mole.src = "";
+        }
+        Mole.style = "margin-left:300px;margin-top:45px; "
+    }
+
 
     //清除图片
+    console.log("mole ID:" + moleId);
+    //奇巧淫技 让setTimeout 传参
+    function _clearMole(moleId) {
+        return function () {
+            clearMole(moleId);
+        }
+    }
+    setTimeout(_clearMole(moleId), 3000);
 
+    function clearMole(moleId) {
+        console.log("mole Id:" + moleId);
+        $(`#mole${moleId}`).remove();
+    }
+
+    //开始运行
+    init();
 }
 
-//清除图片
-function clearMole(id) {
-    var box = document.getElementById(`mole${id}`);
-    box.removeNode(true);
-}
+
 
 
 
 beginGame();
+
+

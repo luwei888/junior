@@ -11,7 +11,7 @@
 
 <main>
 
-
+    <div id="mouseImg"><img style="z-index:999; position:absolute" src="~/打地鼠/鼠标锤子.png"  /></div>
 
     <div id="backgrand">
 
@@ -33,7 +33,7 @@
 
             </div>
 
-            <div id="row2" >
+            <div id="row2">
 
                 <div id="area4" style="width: 826px;height: 289px;">
                     <img id="mound4" src="~/打地鼠/土堆.png" alt="Alternate Text" />
@@ -56,4 +56,19 @@
 
 </main>
 
-<script type="text/javascript" src="~/js/moveUp.js"></script>
+<script type="text/javascript" src="~/js/site.js"></script>
+
+
+@*<script>
+    //文档准备就绪函数
+    $(function () {
+        //图片跟着鼠标移动的效果
+        // 当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。
+        $(document).mousemove(function (e) {
+            //获取图片所在的位置，使用css设置相对位置（ "position": "absolute"）
+            //鼠标相对于文档的左边缘的位置（"left": e.pageX ）
+            //鼠标相对于文档的左边缘的位置（ "top": e.pageY ）
+            $("#mouseImg").css({ "position": "absolute", "left": e.pageX-400, "top": e.pageY-550 });
+        });
+    });
+</script>*@
