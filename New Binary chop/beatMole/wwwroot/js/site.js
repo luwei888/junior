@@ -31,7 +31,6 @@ function gameGather() {
     insertMole(temp[2]);
     insertMole(temp[3]);
 
-
 }
 
 
@@ -92,6 +91,7 @@ function moleUp(id, result, moleType) {
 
     let moleId = id;
 
+
     var areaObj = document.getElementById(`area${moleId}`);
     console.log(`area${moleId}`);
     var moleObj = null;
@@ -129,9 +129,9 @@ function moleUp(id, result, moleType) {
     var insertElement = document.getElementById(`${Mole.id}`);
     //绑定点击事件
     console.log("insertElement =" + insertElement);
-    insertElement.onmousedown = six;
+    insertElement.onmousemove = changeImg;
 
-    function six() {
+    function changeImg() {
         console.log(moleType);
         if (moleType === "mine") {
             Mole.style = "width:400px;margin-left:200px;margin-top:-250px;";
@@ -145,13 +145,13 @@ function moleUp(id, result, moleType) {
 
 
     //清除图片
-    console.log("mole ID:" + moleId);
     //奇巧淫技 让setTimeout 传参
     function _clearMole(moleId) {
         return function () {
             clearMole(moleId);
         }
     }
+
     setTimeout(_clearMole(moleId), 3000);
 
     function clearMole(moleId) {
@@ -164,9 +164,16 @@ function moleUp(id, result, moleType) {
 }
 
 
+//鼠标点击后，图片先隐藏，然后等鼹鼠被击打事件发生后，图片显示并更改图片
 
+$("#mouseImg").click(function () {
+    $("#mouseImg").hide();
+    $("#mouseImg").attr("src", "/打地鼠/锤子.png");
+    setTimeout(function () {
+        $("#mouseImg").show();
+        setTimeout(function () { $("#mouseImg").attr("src", "/打地鼠/鼠标锤子.png"); }, 100)
+    }, 100);
+})
 
 
 beginGame();
-
-

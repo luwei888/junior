@@ -5,13 +5,12 @@
 }
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
-@*<link type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
-@*<script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>*@
+
 <link href="~/css/frame.css" rel="stylesheet" />
 
-<main>
+<body>
 
-    <div id="mouseImg"><img style="z-index:999; position:absolute" src="~/打地鼠/鼠标锤子.png"  /></div>
+    <img id="mouseImg" style="z-index:999; position:absolute" src="~/打地鼠/鼠标锤子.png" />
 
     <div id="backgrand">
 
@@ -54,7 +53,7 @@
     </div>
 
 
-</main>
+</body>
 
 <script type="text/javascript" src="~/js/site.js"></script>
 
@@ -68,7 +67,9 @@
             //获取图片所在的位置，使用css设置相对位置（ "position": "absolute"）
             //鼠标相对于文档的左边缘的位置（"left": e.pageX ）
             //鼠标相对于文档的左边缘的位置（ "top": e.pageY ）
-            $("#mouseImg").css({ "position": "absolute", "left": e.pageX-400, "top": e.pageY-550 });
+            $("#mouseImg").css({ "position": "absolute", "left": e.pageX - 400, "top": e.pageY - 550 });
         });
     });
 </script>
+
+
