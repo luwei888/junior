@@ -4,18 +4,22 @@ namespace reviewDemo
 {
     class Program
     {
-        public struct liu
+        public static int Fibonacci(int value)
         {
-
+            if (value <= 0)
+            {
+                return 0;
+            }
+            else if (value > 0 && value <= 2)
+            {
+                return 1;
+            }
+            else { return Fibonacci(value - 1) + Fibonacci(value - 2); }
         }
 
         static void Main(string[] args)
         {
-            var tuple = (old: 38, name: "feige"); 
-            Console.WriteLine(default(int));
-            Console.WriteLine(tuple.old);
-            string a = "\\\u0086";
-            Console.WriteLine(a);
+            Console.WriteLine(Fibonacci(9));
             Console.Read();
         }
     }

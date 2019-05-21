@@ -1,81 +1,93 @@
-﻿#main {
-    width: 1130px;
-    height: 1130px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: blue;
+﻿
+#grade{
+    color:red;
+    font-size:40px;
+    margin-left:100px;
+    margin-top:80px;
+    z-index:10;
+    float:left;
+}
+
+#beginGame{
+    float:left;
+    margin-left:270px;
+    margin-top:80px;
 }
 
 #backgrand {
     float: left;
-    width: 5120px;
-    height: 2430px;
+    width: 1020px;
+    height: 676px;
     background: url(../打地鼠/背景.jpg);
     background-size: cover;
     z-index: -10;
 }
 
 #area {
-    padding-top: 1500px;
-    padding-left: 1200px;
-    float: left;
+    margin-top: 365px;
+    margin-left: 120px;
 }
 
 #row1 {
-    height: 450px;
+    height: 100px;
 }
 
-    #row1 > div {
-        float: left;
-        padding-right: 80px;
-    }
+#row2 {
+    height: 100px;
+}
+
+#row1 > div {
+    float: left;
+    width: 250px;
+    height: 100px;
+}
 
 #row2 > div {
     float: left;
-    padding-right: 80px;
+    width: 250px;
+    height: 100px;
 }
 
 #mound1 {
     z-index: 3;
     position: absolute;
-    left: 1204px;
-    top: 1500px;
+    left: 165px;
+    top: 380px;
 }
 
 #mound2 {
     z-index: 3;
     position: absolute;
-    left: 2110px;
-    top: 1500px;
+    left: 420px;
+    top: 380px;
 }
 
 #mound3 {
     z-index: 3;
     position: absolute;
-    left: 3016px;
-    top: 1500px;
+    left: 675px;
+    top: 380px;
 }
 
 #mound4 {
     z-index: 3;
     position: absolute;
-    left: 1204px;
-    top: 1950px;
+    left: 165px;
+    top: 480px;
 }
 
 #mound5 {
     z-index: 3;
     position: absolute;
-    left: 2110px;
-    top: 1950px;
+    left: 420px;
+    top: 480px;
 }
 
 #mound6 {
     z-index: 3;
     position: absolute;
-    left: 3016px;
-    top: 1950px;
+    left: 675px;
+    top: 480px;
 }
 
 #mole1 {
@@ -85,29 +97,24 @@
 #mole2 {
     z-index: 2;
     position: absolute;
-    
 }
 
 #mole3 {
     z-index: 2;
     position: absolute;
-    
 }
 
 #mole4 {
     z-index: 2;
     position: absolute;
-    
 }
 
 #mole5 {
     z-index: 2;
     position: absolute;
-   
 }
 
 #mole6 {
     z-index: 2;
     position: absolute;
-  
 }

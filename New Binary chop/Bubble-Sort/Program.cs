@@ -3,6 +3,7 @@
 namespace Bubble_Sort
 {
 
+
     public class RandomArray
     {
         public int[] array;
@@ -35,11 +36,7 @@ namespace Bubble_Sort
             QuickSort quiSort = new QuickSort();
 
 
-
-
         }
-
-
 
     }
 }

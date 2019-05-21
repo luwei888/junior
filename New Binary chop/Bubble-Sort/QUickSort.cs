@@ -7,11 +7,6 @@ namespace Bubble_Sort
     class QuickSort
     {
 
-        internal
-
-        
-
-
         public static void Swap(ref int A, ref int B)
         {
             int temp;
@@ -91,7 +86,6 @@ namespace Bubble_Sort
                 Sort(arr, left + 1, hight);
             }
         }
-
 
     }
 }

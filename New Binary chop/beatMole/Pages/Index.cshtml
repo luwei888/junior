@@ -5,71 +5,70 @@
 }
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
-
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 <link href="~/css/frame.css" rel="stylesheet" />
 
-<body>
+<main id="backgrand">
 
-    <img id="mouseImg" style="z-index:999; position:absolute" src="~/打地鼠/鼠标锤子.png" />
+    <img id="mouseImg" style="z-index:999; position:absolute" src="~/打地鼠/草地打地鼠.png" />
 
-    <div id="backgrand">
+    <span id="grade">积分</span>
 
-        <div id="area">
+    <button id="beginGame" type="button" class="btn btn-primary btn-lg">开始游戏</button>
 
-            <div id="row1">
+    <div id="area">
 
-                <div id="area1" style="width: 826px;height: 289px;">
-                    <img id="mound1" src="~/打地鼠/土堆.png" alt="Alternate Text" />
-                </div>
+        <div id="row1">
 
-                <div id="area2" style="width: 826px;height: 289px;">
-                    <img id="mound2" src="~/打地鼠/土堆.png" alt="Alternate Text" />
-                </div>
-
-                <div id="area3" style="width: 826px;height: 289px;">
-                    <img id="mound3" src="~/打地鼠/土堆.png" alt="Alternate Text" />
-                </div>
-
+            <div id="area1">
+                <img id="mound1" src="~/打地鼠/土堆.png" alt="Alternate Text" />
             </div>
 
-            <div id="row2">
+            <div id="area2">
+                <img id="mound2" src="~/打地鼠/土堆.png" alt="Alternate Text" />
+            </div>
 
-                <div id="area4" style="width: 826px;height: 289px;">
-                    <img id="mound4" src="~/打地鼠/土堆.png" alt="Alternate Text" />
-                </div>
+            <div id="area3">
+                <img id="mound3" src="~/打地鼠/土堆.png" alt="Alternate Text" />
+            </div>
 
-                <div id="area5" style="width: 826px;height: 289px;">
-                    <img id="mound5" src="~/打地鼠/土堆.png" alt="Alternate Text" />
-                </div>
+        </div>
 
-                <div id="area6" style="width: 826px;height: 289px;">
-                    <img id="mound6" src="~/打地鼠/土堆.png" alt="Alternate Text" />
-                </div>
+        <div id="row2">
 
+            <div id="area4">
+                <img id="mound4" src="~/打地鼠/土堆.png" alt="Alternate Text" />
+            </div>
+
+            <div id="area5">
+                <img id="mound5" src="~/打地鼠/土堆.png" alt="Alternate Text" />
+            </div>
+
+            <div id="area6">
+                <img id="mound6" src="~/打地鼠/土堆.png" alt="Alternate Text" />
             </div>
 
         </div>
 
     </div>
 
-
-</body>
+</main>
 
 <script type="text/javascript" src="~/js/site.js"></script>
 
-
 <script>
     //文档准备就绪函数
-    $(function () {
-        //图片跟着鼠标移动的效果
-        // 当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。
-        $(document).mousemove(function (e) {
-            //获取图片所在的位置，使用css设置相对位置（ "position": "absolute"）
-            //鼠标相对于文档的左边缘的位置（"left": e.pageX ）
-            //鼠标相对于文档的左边缘的位置（ "top": e.pageY ）
-            $("#mouseImg").css({ "position": "absolute", "left": e.pageX - 400, "top": e.pageY - 550 });
+    $("#beginGame").click(function () {
+        $(function () {
+            //图片跟着鼠标移动的效果
+            // 当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。
+            $(document).mousemove(function (e) {
+                //获取图片所在的位置，使用css设置相对位置（ "position": "absolute"）
+                //鼠标相对于文档的左边缘的位置（"left": e.pageX ）
+                //鼠标相对于文档的左边缘的位置（ "top": e.pageY ）
+                $("#mouseImg").css({ "position": "absolute", "left": e.pageX - 35, "top": e.pageY - 50 });
+            });
         });
     });
+
 </script>
-
-

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+
+//冒泡排序，复杂度n²
+
 namespace Bubble_Sort
 {
-   public  class BubbleSort
+    public class BubbleSort
     {
-
-        
-
         public static void Swap(ref int A, ref int B)
         {
             int temp;
@@ -19,7 +20,7 @@ namespace Bubble_Sort
 
         public void Sort(int length)
         {
-            int lengt =length;
+            int lengt = length;
             int time = 0;
             RandomArray bubble = new RandomArray(lengt);
             for (bool seek = true; seek == true;)
