@@ -7,35 +7,33 @@ namespace CollectionsApplication
     {
         static void Main(string[] args)
         {
-            Hashtable ht = new Hashtable
-            {
-                { "001", "Zara Ali" },
-                { "002", "Abida Rehman" },
-                { "003", "Joe Holzner" },
-                { "004", "Mausam Benazir Nur" },
-                { "005", "M. Amlan" },
-                { "006", "M. Arif" },
-                { "007", "Ritesh Saikia" }
-            };
+            Hashtable ht = new Hashtable();
 
-            if (ht.ContainsValue("Nuha Ali"))
+
+            ht.Add("001", "luwei");
+            ht.Add("002", "feige");
+            ht.Add("003", "xiaolong");
+            ht.Add("004", "laocheng");
+            ht.Add("005", "M. Amlan");
+            ht.Add("006", "M. Arif");
+            ht.Add("007", "Ritesh Saikia");
+
+            if (ht.ContainsValue("laozhao"))
             {
-                Console.WriteLine("This student name is already in the list");
+                Console.WriteLine("this list have laozhao!");
             }
             else
             {
-                ht.Add("008", "Nuha Ali");
+                ht.Add("008", "laozhao");
             }
-            // 获取键的集合
+
             ICollection key = ht.Keys;
-
-
 
             foreach (string k in key)
             {
-                Console.WriteLine(k + ": " + ht[k]);  
+                Console.WriteLine(k+""+ht[k]);
             }
-            Console.ReadKey();
+            Console.Read();
         }
     }
 }

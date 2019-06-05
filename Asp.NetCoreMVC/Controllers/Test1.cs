@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Asp.NetCoreMVC.Controllers
 {
+    //引入命名空间
     [Controller]
-    public class Test1
+    public class Test1:Controller
     {
+        public IActionResult sayHello()
+        {
+            return Content("hello!");
+        }
+
     }
 }

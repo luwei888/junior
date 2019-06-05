@@ -1,34 +1,35 @@
 ﻿using System;
+
 namespace IndexerApplication
 {
     class IndexedNames
     {
-        private string[] namelist = new string[size];
         static public int size = 10;
+        private string[] namelist = new string[size];
         public IndexedNames()
         {
             for (int i = 0; i < size; i++)
             {
-                namelist[i] = "N. A.";
+                namelist[i] = "N.A";
             }
         }
+
         public string this[int index]
         {
             get
             {
-                string tmp;
-
+                string temp;
                 if (index >= 0 && index <= size - 1)
                 {
-                    tmp = namelist[index];
+                    temp = namelist[index];
                 }
                 else
                 {
-                    tmp = "";
+                    temp = "";
                 }
-
-                return (tmp);
+                return temp;
             }
+
             set
             {
                 if (index >= 0 && index <= size - 1)
@@ -54,5 +55,7 @@ namespace IndexerApplication
             }
             Console.ReadKey();
         }
+
     }
+
 }
