@@ -1,0 +1,31 @@
+﻿
+@model Asp.NetCoreMVC.Controllers.Test5Controller.UserModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.UserName)</td>
+            <td>@Html.TextBoxFor(m => m.UserName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.TrueName)</td>
+            <td>@Html.TextBoxFor(m => m.TrueName)</td>
+        </tr>
+        <tr>
+            <td>电话</td>
+            <td>@Model.Telephone</td>
+        </tr>
+    </table>
+</body>
+</html>

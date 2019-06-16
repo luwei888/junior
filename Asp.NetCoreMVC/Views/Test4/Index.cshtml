@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <form action="/Test4/checkUser" method="post">
+        用户名：<input type="text" name="username" />
+        密码：<input type="password" name="userPassword" />
+           <br />
+           <select>
+               @foreach (var item in ViewBag.lsData)
+               {
+                   <option value="@item">@item</option>
+               }
+           </select>
+           <br />
+        用户名：@Html.TextBox("username1",(string)ViewBag.Username,null,new {attr1 = "value1" })
+        密码：@Html.Password("userPassword1")
+
+           <input type="submit" value="登录" />
+    </form>
+
+</body>
+</html>
