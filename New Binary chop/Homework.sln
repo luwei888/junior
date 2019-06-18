@@ -65,6 +65,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "advanceGrammarDemo", "advan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "drawIdentifying", "drawIdentifying\drawIdentifying.csproj", "{9F7444D3-AA97-4F49-863F-7425B6B85AF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thread", "Thread\Thread.csproj", "{A9B563DE-2091-4FB2-8966-61591F768781}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,6 +165,10 @@ Global
 		{9F7444D3-AA97-4F49-863F-7425B6B85AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F7444D3-AA97-4F49-863F-7425B6B85AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F7444D3-AA97-4F49-863F-7425B6B85AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9B563DE-2091-4FB2-8966-61591F768781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B563DE-2091-4FB2-8966-61591F768781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B563DE-2091-4FB2-8966-61591F768781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B563DE-2091-4FB2-8966-61591F768781}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -190,6 +196,7 @@ Global
 		{4948C406-1390-4A81-B7E0-6E8473A92A10} = {3E92AB6E-039F-4D37-A194-D703A169F445}
 		{BA8FAA0C-FC3C-4A14-85EA-DA7DC85A9DD1} = {3E92AB6E-039F-4D37-A194-D703A169F445}
 		{6C5879BC-D2E2-432C-8893-2F62F217199C} = {90AA3E7C-2DED-41B5-ABD9-EE987260F1BA}
+		{A9B563DE-2091-4FB2-8966-61591F768781} = {90AA3E7C-2DED-41B5-ABD9-EE987260F1BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AA6B83E-27C9-4427-AF77-D9D7FD4CB187}

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Xml.Linq;
 
 namespace advanceGrammarDemo
@@ -50,25 +51,28 @@ namespace advanceGrammarDemo
 
             //document.Save("E:\\homework\\luckystack.xml");
 
-            XElement element = XElement.Load("E:\\homework\\luckystack.xml");
+            //XElement element = XElement.Load("E:\\homework\\luckystack.xml");
 
-            var rootNode = element.FirstNode.NextNode;
+            //var rootNode = element.FirstNode.NextNode;
 
             //rootNode.AddAfterSelf(new XElement("article", new XElement("id"),
             //    new XElement("title", "新加的内容"), new XElement("authorId")));
 
-            var id = from x in element.Descendants()
-                     where x.Name == "id"
-                     where x.Value == "1"
-                     select x;
-            var article = from x in element.Descendants()
-                          where x.Name == "article"
-                          where x.FirstNode == id.First()
-                          select x;
+            //var id = from x in element.Descendants()
+            //         where x.Name == "id"
+            //         where x.Value == "1"
+            //         select x;
+            //var article = from x in element.Descendants()
+            //              where x.Name == "article"
+            //              where x.FirstNode == id.First()
+            //              select x;
 
-            article.First().Remove();
-            Console.WriteLine(element);
-            Console.Read();
+            //article.First().Remove();
+            //Console.WriteLine(element);
+            //Console.Read();
+
+
+
         }
 
     }
