@@ -6,27 +6,22 @@ namespace Threadplace
 {
     class Program
     {
+        public void Test()
+        {
+            ThreadStart threadStart = new ThreadStart(Calculate);
+            Thread thread = new Thread(threadStart);
+            thread.Start();
+        }
+
+        public void Calculate()
+        {
+            double Diameter = 0.5;
+            Console.Write("The perimeter Of Circle with a Diameter of {0} is {1}", Diameter, Diameter * Math.PI);
+        }
+
         static void Main(string[] args)
         {
-
-             Action getup = () =>
-            {
-                Console.WriteLine($"Task-{Task.CurrentId}起床啦！...." +
-                    $"ThreadId:{Thread.CurrentThread.ManagedThreadId}");
-                Console.WriteLine();
-            };
-
-
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine($"第{i+1}次");
-
-                Task t = new Task(getup);
-                t.Start();
-            }
-
             Console.ReadLine();
-
         }
     }
 }
