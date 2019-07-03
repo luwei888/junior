@@ -22,13 +22,26 @@ namespace IspExample
             //runMi.Invoke(o, null);
             //Console.Read();
 
+
+
+            //var sc = new ServiceCollection();
+            //sc.AddScoped(typeof(ITank), typeof(MediumTank));
+            //var sp = sc.BuildServiceProvider();
+            ////--------------------------------
+            //ITank tank = sp.GetService<ITank>();
+            //tank.fire();
+            //tank.run();
+            //Console.Read();
+
             var sc = new ServiceCollection();
-            sc.AddScoped(typeof(ITank), typeof(HeavyTank));
+            sc.AddScoped(typeof(ITank), typeof(MediumTank));
+            sc.AddScoped(typeof(IVehicle), typeof(Car));
+            sc.AddScoped<Driver>();
             var sp = sc.BuildServiceProvider();
-            //--------------------------------
-            ITank tank = sp.GetService<ITank>();
-            tank.fire();
-            tank.run();
+            //-----------------
+            var driver = sp.GetService<Driver>();
+            driver.Drive();
+
             Console.Read();
         }
     }
@@ -86,6 +99,19 @@ namespace IspExample
         public void run()
         {
             Console.WriteLine("Tank is running");
+        }
+    }
+
+    class MediumTank : ITank
+    {
+        public void fire()
+        {
+            Console.WriteLine("MediumTank fire");
+        }
+
+        public void run()
+        {
+            Console.WriteLine("MediumTank run");
         }
     }
 
