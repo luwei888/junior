@@ -22,8 +22,6 @@ namespace IspExample
             //runMi.Invoke(o, null);
             //Console.Read();
 
-
-
             //var sc = new ServiceCollection();
             //sc.AddScoped(typeof(ITank), typeof(MediumTank));
             //var sp = sc.BuildServiceProvider();
