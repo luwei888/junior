@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BabyStoller.SDK;
+using System;
 
 namespace Animals.Lib
 {
-    public class Cat
+    public class Cat:IAnimal
     {
         public void Voice(int times)
         {

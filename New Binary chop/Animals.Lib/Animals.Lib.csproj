@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="BabyStoller.SDK">
+      <HintPath>..\..\..\..\..\Desktop\BabyStoller.SDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

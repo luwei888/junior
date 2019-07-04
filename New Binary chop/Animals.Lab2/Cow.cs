@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BabyStoller.SDK;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Animals.Lab2
 {
-   public class Cow
+   public class Cow:IAnimal
     {
         public void Voice(int times)
         {

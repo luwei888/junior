@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BabyStoller.SDK;
+using System;
 
 namespace Animals.Lab2
 {
-    public class Dog
+    public class Dog:IAnimal
     {
         public void Voice (int times)
         {
