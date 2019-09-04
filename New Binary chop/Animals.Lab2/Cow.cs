@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Animals.Lab2
 {
+    [Unfinished]
    public class Cow:IAnimal
     {
         public void Voice(int times)

@@ -9,6 +9,7 @@ namespace DI
             var user = new PhionUser(new NokiaPhion());
             user.UsePhone();
             Console.Read();
+
         }
     }
 

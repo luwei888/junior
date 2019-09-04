@@ -19,11 +19,13 @@ namespace Asp.NetCoreMVC.Controllers
 
 
             //传递列表数据
-            List<string> lsData = new List<string>();
-            lsData.Add("第一行列表");
-            lsData.Add("第二行列表");
-            lsData.Add("第三行列表");
-            lsData.Add("第四行列表");
+            List<string> lsData = new List<string>
+            {
+                "第一行列表",
+                "第二行列表",
+                "第三行列表",
+                "第四行列表"
+            };
 
             ViewBag.listData = lsData;
 

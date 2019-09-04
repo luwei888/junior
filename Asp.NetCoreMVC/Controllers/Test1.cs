@@ -10,7 +10,7 @@ namespace Asp.NetCoreMVC.Controllers
     [Controller]
     public class Test1:Controller
     {
-        public IActionResult sayHello()
+        public IActionResult SayHello()
         {
             return Content("hello!");
         }

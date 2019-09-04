@@ -22,6 +22,14 @@ namespace IspExample
             //runMi.Invoke(o, null);
             //Console.Read();
 
+            ITank tank = new HeavyTank();
+            var t = tank.GetType();
+            object o = Activator.CreateInstance(t);
+            MethodInfo fireMi = t.GetMethod("fire");
+            MethodInfo runMi = t.GetMethod("run");
+            fireMi.Invoke(o, null);
+            runMi.Invoke(o, null);
+
             //var sc = new ServiceCollection();
             //sc.AddScoped(typeof(ITank), typeof(MediumTank));
             //var sp = sc.BuildServiceProvider();

@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowCustomer</title>
+
+</head>
+<body>
+    @{var customer = ViewData["Customer"] as Customer;}
+    <div>
+        <table>
+            <tr>
+                <td>顾客名</td>
+                <td>@customer.Name</td>
+            </tr>
+            <tr>
+                <td>顾客Id</td>
+                <td>@customer.Id</td>
+            </tr>
+            <tr>
+                <td>顾客Email</td>
+                <td>@customer.Email</td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>

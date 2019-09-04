@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Asp.NetCoreMVC.Controllers
 {
-    public class test2Controller:Controller
+    public class Test2Controller:Controller
     {
-        public IActionResult resultJson()
+        public IActionResult ResultJson()
         {
             JsonResult result = new JsonResult(new { username = "luwei" });
 
